@@ -1,22 +1,22 @@
 class App extends React.Component {
     state = {
-        people:[]
+        listing:[]
     }
 
     componentDidMount = () => {
-        axios.get('/people').then(
+        axios.get('/listing').then(
             (response) => {
                 this.setState({
-                    people:response.data
+                    listing:response.data
                 })
             }
         )
     }
 
-    createPerson = (event) => {
+    createListing = (event) => {
         event.preventDefault();
         axios.post(
-            '/people',
+            '/listing',
             {
                 name:this.state.newPersonName,
                 age:this.state.newPersonAge,
