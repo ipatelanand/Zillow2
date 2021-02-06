@@ -344,15 +344,35 @@ class App extends React.Component {
 					<br />
 					<input onKeyUp={this.changeState} type="text" placeholder="State" />
 					<br />
-					<input onKeyUp={this.changeZip} type="int" placeholder="Zip" />
+					<input onKeyUp={this.changeZip} type="number" placeholder="Zip" />
 					<br />
-					<input onKeyUp={this.changePrice} type="money" placeholder="Price" />
+					<input
+						onKeyUp={this.changePrice}
+						type="number"
+						step="0.01"
+						placeholder="Price"
+					/>
 					<br />
-					<input onKeyUp={this.changeBeds} type="float" placeholder="Beds" />
+					<input
+						onKeyUp={this.changeBeds}
+						type="number"
+						step="0.01"
+						placeholder="Beds"
+					/>
 					<br />
-					<input onKeyUp={this.changeBath} type="float" placeholder="Bath" />
+					<input
+						onKeyUp={this.changeBath}
+						type="number"
+						step="0.01"
+						placeholder="Bath"
+					/>
 					<br />
-					<input onKeyUp={this.changeSqft} type="float" placeholder="Sqft" />
+					<input
+						onKeyUp={this.changeSqft}
+						type="number"
+						step="0.01"
+						placeholder="Sqft"
+					/>
 					<br />
 					<input
 						onKeyUp={this.changeDescription}
@@ -360,7 +380,7 @@ class App extends React.Component {
 						placeholder="Description"
 					/>
 					<br />
-					<input onKeyUp={this.changeImage} type="img" placeholder="Image" />
+					<input onKeyUp={this.changeImage} type="text" placeholder="Image" />
 					<br />
 					<input
 						onKeyUp={this.changeLastSoldDate}
@@ -370,121 +390,138 @@ class App extends React.Component {
 					<br />
 					<input
 						onKeyUp={this.changeLastSoldAmount}
-						type="text"
+						type="number"
+						step="0.01"
 						placeholder="LastSoldAmount"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeListingBy}
-						type="money"
+						type="text"
 						placeholder="ListingBy"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeListingPhone}
-						type="text"
+						type="tel"
 						placeholder="ListingPhone"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeListingEmail}
-						type="int"
+						type="email"
 						placeholder="ListingEmail"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeTaxAnnual}
-						type="text"
+						type="number"
+						step="0.01"
 						placeholder="TaxAnnual"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeHoaMonthly}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="HoaMonthly"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeRentalValueTraditional}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="RentalValueTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeRentalValueAirBnb}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="RentalValueAirBnb"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeInvestmentScoreTraditional}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="InvestmentScoreTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeInvestmentScoreAirBnb}
-						type="int"
+						type="number"
+						step="0.01"
 						placeholder="InvestmentScoreAirBnb"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeOccupancyTraditionalPercentPerYear}
-						type="int"
+						type="number"
+						step="0.01"
 						placeholder="OccupancyTraditionalPercentPerYear"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeAnnualIncomeTraditional}
-						type="float"
+						type="number"
+						step="0.01"
 						placeholder="AnnualIncomeTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeAdjustedIncomeTraditional}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="AdjustedIncomeTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeIndexTraditional}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="IndexTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeScoreTraditional}
-						type="int"
+						type="number"
+						step="0.01"
 						placeholder="ScoreTraditional"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeOccupancyAirBnbPercentPerYear}
-						type="int"
+						type="number"
+						step="0.01"
 						placeholder="OccupancyAirBnbPercentPerYear"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeAnnualIncomeAirBnb}
-						type="float"
+						type="number"
+						step="0.01"
 						placeholder="AnnualIncomeAirBnb"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeAdjustedIncomeAirBnb}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="AdjustedIncomeAirBnb"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeIndexAirBnb}
-						type="money"
+						type="number"
+						step="0.01"
 						placeholder="IndexAirBnb"
 					/>
 					<br />
 					<input
 						onKeyUp={this.changeScoreAirBnb}
-						type="int"
+						type="number"
+						step="0.01"
 						placeholder="ScoreAirBnb"
 					/>
 					<br />
@@ -521,31 +558,35 @@ class App extends React.Component {
 									<br />
 									<input
 										onKeyUp={this.changeUpdateZip}
-										type="int"
+										type="number"
 										placeholder="Zip"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdatePrice}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="Price"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateBeds}
-										type="float"
+										type="number"
+										step="0.01"
 										placeholder="Beds"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateBath}
-										type="float"
+										type="number"
+										step="0.01"
 										placeholder="Bath"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateSqft}
-										type="float"
+										type="number"
+										step="0.01"
 										placeholder="Sqft"
 									/>
 									<br />
@@ -557,7 +598,7 @@ class App extends React.Component {
 									<br />
 									<input
 										onKeyUp={this.changeUpdateImage}
-										type="image"
+										type="text"
 										placeholder="Image"
 									/>
 									<br />
@@ -569,61 +610,68 @@ class App extends React.Component {
 									<br />
 									<input
 										onKeyUp={this.changeUpdateLastSoldAmount}
-										type="text"
+										type="number"
+										step="0.01"
 										placeholder="LastSoldAmount"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateListingBy}
-										type="money"
+										type="text"
 										placeholder="ListingBy"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateListingPhone}
-										type="text"
+										type="tel"
 										placeholder="ListingPhone"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateListingEmail}
-										type="int"
+										type="email"
 										placeholder="ListingEmail"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateTaxAnnual}
-										type="text"
+										type="number"
+										step="0.01"
 										placeholder="TaxAnnual"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateHoaMonthly}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="HoaMonthly"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateRentalValueTraditional}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="RentalValueTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateRentalValueAirBnb}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="RentalValueAirBnb"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateInvestmentScoreTraditional}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="InvestmentScoreTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateInvestmentScoreAirBnb}
-										type="int"
+										type="number"
+										step="0.01"
 										placeholder="InvestmentScoreAirBnb"
 									/>
 									<br />
@@ -631,61 +679,71 @@ class App extends React.Component {
 										onKeyUp={
 											this.changeUpdateOccupancyTraditionalPercentPerYear
 										}
-										type="int"
+										type="number"
+										step="0.01"
 										placeholder="OccupancyTraditionalPercentPerYear"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateAnnualIncomeTraditional}
-										type="float"
+										type="number"
+										step="0.01"
 										placeholder="AnnualIncomeTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateAdjustedIncomeTraditional}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="AdjustedIncomeTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateIndexTraditional}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="IndexTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateScoreTraditional}
-										type="int"
+										type="number"
+										step="0.01"
 										placeholder="ScoreTraditional"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateOccupancyAirBnbPercentPerYear}
-										type="int"
+										type="number"
+										step="0.01"
 										placeholder="OccupancyAirBnbPercentPerYear"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateAnnualIncomeAirBnb}
-										type="float"
+										type="number"
+										step="0.01"
 										placeholder="AnnualIncomeAirBnb"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateAdjustedIncomeAirBnb}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="AdjustedIncomeAirBnb"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateIndexAirBnb}
-										type="money"
+										type="number"
+										step="0.01"
 										placeholder="IndexAirBnb"
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateScoreAirBnb}
-										type="int"
+										type="number"
+										step="0.01"
 										placeholder="ScoreAirBnb"
 									/>
 									<br />
