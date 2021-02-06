@@ -3,14 +3,6 @@ class App extends React.Component {
 		listing: [],
 	}
 
-	componentDidMount = () => {
-		axios.get("/listing").then((response) => {
-			this.setState({
-				listing: [response.data],
-			})
-		})
-	}
-
 	createListing = (event) => {
 		event.preventDefault()
 		axios
@@ -330,6 +322,15 @@ class App extends React.Component {
 	}
 	changeUpdateScoreAirBnb = (event) => {
 		this.setState({ updateScoreAirBnb: event.target.value })
+	}
+
+	componentDidMount = () => {
+		axios.get("/listing").then((response) => {
+			console.log(response)
+			this.setState({
+				listing: response.data,
+			})
+		})
 	}
 
 	render = () => {
