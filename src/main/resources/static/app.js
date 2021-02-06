@@ -6,7 +6,7 @@ class App extends React.Component {
 	componentDidMount = () => {
 		axios.get("/listing").then((response) => {
 			this.setState({
-				listing: response.data,
+				listing: [response.data],
 			})
 		})
 	}
