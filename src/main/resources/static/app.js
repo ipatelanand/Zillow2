@@ -18,7 +18,31 @@ class App extends React.Component {
         axios.post(
             '/listing',
             {
-                name:this.state.newPersonName,
+
+                street text, city text, state text, zip int, price money, beds float, bath float, sqft float, description text, image text, lastSoldDate text, lastSoldAmount money, listingBy text;, listingPhone int, listingEmail text, taxAnnual money, hoaMonthly money, rentalValueTraditional money, rentalValueAirBnb money, investmentScoreTraditional int, investmentScoreAirBnb int, occupancyTraditionalPercentPerYear float, annualIncomeTraditional money, adjustedIncomeTraditional money, indexTraditional int, scoreTraditional int, occupancyAirBnbPercentPerYear float, annualIncomeAirBnb money, adjustedIncomeAirBnb money, indexAirBnb int, scoreAirBnb int,
+                street: this.state.newStreet,
+                city: this.state.newCity,
+                state: this.state.newState,
+                zip: this.state.newZip,
+                price: this.state.newPrice,
+                beds: this.state.newBeds,
+                bath: this.state.newBath,
+                sqft: this.state.newSqft,
+                description: this.state.newDescription,
+                image: this.state.newImage,
+                lastSoldDate: this.state.newLastSoldDate,
+                lastSoldAmount: this.state.newLastSoldAmount,
+                listingBy: this.state.newListingBy,
+                listingPhone: this.state.newListingPhone,
+                taxAnnual: this.state.newTaxAnnual,
+                hoaMonthly: this.state.newHoaMonthly,
+                rentalValueTraditional: this.state.newRentalValueTraditional,
+                rentalValueAirBnb: this.state.newRentalValueAirbnb,
+                investmentScoreTraditional: this.state.newInvestmentScoreTraditional,
+                investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
+                occupancyTraditionalPercentPerYear: this.state.newOccupancyTraditionalPercentPerYear,
+
+
                 age:this.state.newPersonAge,
             }
         ).then(
