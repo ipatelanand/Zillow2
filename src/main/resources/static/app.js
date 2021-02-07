@@ -543,9 +543,11 @@ class App extends React.Component {
 				<h2>Listings</h2>
 				{this.state.listing.map((listing, index) => {
 					return (
-						<li key={index}>
-							<h6>{listing.street}</h6>
-						</li>
+						<div class="container">
+							<li key={index}>
+								<h6>{listing.street}</h6>
+							</li>
+						</div>
 					)
 				})}
 				<ul>
