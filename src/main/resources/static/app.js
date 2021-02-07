@@ -7,7 +7,7 @@ class App extends React.Component {
 		event.preventDefault()
 		axios
 			.post("/listing", {
-				street: this.state.newStreet,
+				street: this.state.street,
 				city: this.state.newCity,
 				state: this.state.newState,
 				zip: this.state.newZip,
@@ -49,7 +49,7 @@ class App extends React.Component {
 	}
 
 	changeNewStreet = (event) => {
-		this.setState({ newStreet: event.target.value })
+		this.setState({ street: event.target.value })
 	}
 	changeNewCity = (event) => {
 		this.setState({ newCity: event.target.value })
@@ -341,7 +341,7 @@ class App extends React.Component {
 					<input
 						onKeyUp={this.changeNewStreet}
 						type="text"
-						placeholder="Street"
+						placeholder="street"
 					/>
 					<br />
 					<input onKeyUp={this.changeNewCity} type="text" placeholder="City" />
