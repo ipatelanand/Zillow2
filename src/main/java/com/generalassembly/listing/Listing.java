@@ -54,7 +54,7 @@ public class Listing {
 	}
 
 	public String getStreet() {
-		return this.street;
+		return street;
 	}
 
 	public void setStreet(String street) {
@@ -62,7 +62,7 @@ public class Listing {
 	}
 
 	public String getCity() {
-		return this.city;
+		return city;
 	}
 
 	public void setCity(String city) {
@@ -70,7 +70,7 @@ public class Listing {
 	}
 
 	public String getState() {
-		return this.state;
+		return state;
 	}
 
 	public void setState(String state) {
@@ -78,7 +78,7 @@ public class Listing {
 	}
 
 	public Integer getZip() {
-		return this.zip;
+		return zip;
 	}
 
 	public void setZip(Integer zip) {
@@ -86,7 +86,7 @@ public class Listing {
 	}
 
 	public Double getPrice() {
-		return this.price;
+		return price;
 	}
 
 	public void setPrice(Double price) {
@@ -94,7 +94,7 @@ public class Listing {
 	}
 
 	public Double getBeds() {
-		return this.beds;
+		return beds;
 	}
 
 	public void setBeds(Double beds) {
@@ -102,7 +102,7 @@ public class Listing {
 	}
 
 	public Double getBath() {
-		return this.bath;
+		return bath;
 	}
 
 	public void setBath(Double bath) {
@@ -110,7 +110,7 @@ public class Listing {
 	}
 
 	public Double getSqft() {
-		return this.sqft;
+		return sqft;
 	}
 
 	public void setSqft(Double sqft) {
@@ -118,7 +118,7 @@ public class Listing {
 	}
 
 	public String getDescription() {
-		return this.description;
+		return description;
 	}
 
 	public void setDescription(String description) {
@@ -126,7 +126,7 @@ public class Listing {
 	}
 
 	public String getImage() {
-		return this.image;
+		return image;
 	}
 
 	public void setImage(String image) {
@@ -134,7 +134,7 @@ public class Listing {
 	}
 
 	public String getLastSoldDate() {
-		return this.lastSoldDate;
+		return lastSoldDate;
 	}
 
 	public void setLastSoldDate(String lastSoldDate) {
@@ -142,7 +142,7 @@ public class Listing {
 	}
 
 	public Double getLastSoldAmount() {
-		return this.lastSoldAmount;
+		return lastSoldAmount;
 	}
 
 	public void setLastSoldAmount(Double lastSoldAmount) {
@@ -150,7 +150,7 @@ public class Listing {
 	}
 
 	public String getListingBy() {
-		return this.listingBy;
+		return listingBy;
 	}
 
 	public void setListingBy(String listingBy) {
@@ -158,7 +158,7 @@ public class Listing {
 	}
 
 	public String getListingPhone() {
-		return this.listingPhone;
+		return listingPhone;
 	}
 
 	public void setListingPhone(String listingPhone) {
@@ -166,7 +166,7 @@ public class Listing {
 	}
 
 	public String getListingEmail() {
-		return this.listingEmail;
+		return listingEmail;
 	}
 
 	public void setListingEmail(String listingEmail) {
@@ -174,7 +174,7 @@ public class Listing {
 	}
 
 	public Double getTaxAnnual() {
-		return this.taxAnnual;
+		return taxAnnual;
 	}
 
 	public void setTaxAnnual(Double taxAnnual) {
@@ -182,7 +182,7 @@ public class Listing {
 	}
 
 	public Double getHoaMonthly() {
-		return this.hoaMonthly;
+		return hoaMonthly;
 	}
 
 	public void setHoaMonthly(Double hoaMonthly) {
@@ -190,7 +190,7 @@ public class Listing {
 	}
 
 	public Double getRentalValueTraditional() {
-		return this.rentalValueTraditional;
+		return rentalValueTraditional;
 	}
 
 	public void setRentalValueTraditional(Double rentalValueTraditional) {
@@ -198,7 +198,7 @@ public class Listing {
 	}
 
 	public Double getRentalValueAirBnb() {
-		return this.rentalValueAirBnb;
+		return rentalValueAirBnb;
 	}
 
 	public void setRentalValueAirBnb(Double rentalValueAirBnb) {
@@ -206,7 +206,7 @@ public class Listing {
 	}
 
 	public Integer getInvestmentScoreTraditional() {
-		return this.investmentScoreTraditional;
+		return investmentScoreTraditional;
 	}
 
 	public void setInvestmentScoreTraditional(Integer investmentScoreTraditional) {
@@ -214,7 +214,7 @@ public class Listing {
 	}
 
 	public Integer getInvestmentScoreAirBnb() {
-		return this.investmentScoreAirBnb;
+		return investmentScoreAirBnb;
 	}
 
 	public void setInvestmentScoreAirBnb(Integer investmentScoreAirBnb) {
@@ -222,7 +222,7 @@ public class Listing {
 	}
 
 	public Double getOccupancyTraditionalPercentPerYear() {
-		return this.occupancyTraditionalPercentPerYear;
+		return occupancyTraditionalPercentPerYear;
 	}
 
 	public void setOccupancyTraditionalPercentPerYear(Double occupancyTraditionalPercentPerYear) {
@@ -230,7 +230,7 @@ public class Listing {
 	}
 
 	public Double getAnnualIncomeTraditional() {
-		return this.annualIncomeTraditional;
+		return annualIncomeTraditional;
 	}
 
 	public void setAnnualIncomeTraditional(Double annualIncomeTraditional) {
@@ -238,7 +238,7 @@ public class Listing {
 	}
 
 	public Double getAdjustedIncomeTraditional() {
-		return this.adjustedIncomeTraditional;
+		return adjustedIncomeTraditional;
 	}
 
 	public void setAdjustedIncomeTraditional(Double adjustedIncomeTraditional) {
@@ -246,7 +246,7 @@ public class Listing {
 	}
 
 	public Integer getIndexTraditional() {
-		return this.indexTraditional;
+		return indexTraditional;
 	}
 
 	public void setIndexTraditional(Integer indexTraditional) {
@@ -254,7 +254,7 @@ public class Listing {
 	}
 
 	public Integer getScoreTraditional() {
-		return this.scoreTraditional;
+		return scoreTraditional;
 	}
 
 	public void setScoreTraditional(Integer scoreTraditional) {
@@ -262,7 +262,7 @@ public class Listing {
 	}
 
 	public Double getOccupancyAirBnbPercentPerYear() {
-		return this.occupancyAirBnbPercentPerYear;
+		return occupancyAirBnbPercentPerYear;
 	}
 
 	public void setOccupancyAirBnbPercentPerYear(Double occupancyAirBnbPercentPerYear) {
@@ -270,7 +270,7 @@ public class Listing {
 	}
 
 	public Double getAnnualIncomeAirBnb() {
-		return this.annualIncomeAirBnb;
+		return annualIncomeAirBnb;
 	}
 
 	public void setAnnualIncomeAirBnb(Double annualIncomeAirBnb) {
@@ -278,7 +278,7 @@ public class Listing {
 	}
 
 	public Double getAdjustedIncomeAirBnb() {
-		return this.adjustedIncomeAirBnb;
+		return adjustedIncomeAirBnb;
 	}
 
 	public void setAdjustedIncomeAirBnb(Double adjustedIncomeAirBnb) {
@@ -286,7 +286,7 @@ public class Listing {
 	}
 
 	public Integer getIndexAirBnb() {
-		return this.indexAirBnb;
+		return indexAirBnb;
 	}
 
 	public void setIndexAirBnb(Integer indexAirBnb) {
@@ -294,7 +294,7 @@ public class Listing {
 	}
 
 	public Integer getScoreAirBnb() {
-		return this.scoreAirBnb;
+		return scoreAirBnb;
 	}
 
 	public void setScoreAirBnb(Integer scoreAirBnb) {
