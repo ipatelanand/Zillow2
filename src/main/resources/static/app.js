@@ -541,6 +541,13 @@ class App extends React.Component {
 					<input type="submit" value="Create Listing" />
 				</form>
 				<h2>Listings</h2>
+				{this.state.listing.map((listing, index) => {
+					return (
+						<li key={index}>
+							<h6>listing.street</h6>
+						</li>
+					)
+				})}
 				<ul>
 					{this.state.listing.map((listing, index) => {
 						return (
