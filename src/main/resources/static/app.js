@@ -15,31 +15,31 @@ class App extends React.Component {
 				beds: this.state.newBeds,
 				bath: this.state.newBath,
 				sqft: this.state.newSqft,
-				// description: this.state.newDescription,
-				// image: this.state.newImage,
-				// lastSoldDate: this.state.newLastSoldDate,
-				// lastSoldAmount: this.state.newLastSoldAmount,
-				// listingBy: this.state.newListingBy,
-				// listingPhone: this.state.newListingPhone,
-				// listingEmail: this.state.newListingEmail,
-				// taxAnnual: this.state.newTaxAnnual,
-				// hoaMonthly: this.state.newHoaMonthly,
-				// rentalValueTraditional: this.state.newRentalValueTraditional,
-				// rentalValueAirBnb: this.state.newRentalValueAirBnb,
-				// investmentScoreTraditional: this.state.newInvestmentScoreTraditional,
-				// investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
-				// occupancyTraditionalPercentPerYear: this.state
-				// 	.newOccupancyTraditionalPercentPerYear,
-				// annualIncomeTraditional: this.state.newAnnualIncomeTraditional,
-				// adjustedIncomeTraditional: this.state.newAdjustedIncomeTraditional,
-				// indexTraditional: this.state.newIndexTraditional,
-				// scoreTraditional: this.state.newScoreTraditional,
-				// occupancyAirBnbPercentPerYear: this.state
-				// 	.newOccupancyAirBnbPercentPerYear,
-				// annualIncomeAirBnb: this.state.newAnnualIncomeAirBnb,
-				// adjustedIncomeAirBnb: this.state.newAdjustedIncomeAirBnb,
-				// indexAirBnb: this.state.newIndexAirBnb,
-				// scoreAirBnb: this.state.newScoreAirBnb,
+				description: this.state.newDescription,
+				image: this.state.newImage,
+				lastSoldDate: this.state.newLastSoldDate,
+				lastSoldAmount: this.state.newLastSoldAmount,
+				listingBy: this.state.newListingBy,
+				listingPhone: this.state.newListingPhone,
+				listingEmail: this.state.newListingEmail,
+				taxAnnual: this.state.newTaxAnnual,
+				hoaMonthly: this.state.newHoaMonthly,
+				rentalValueTraditional: this.state.newRentalValueTraditional,
+				rentalValueAirBnb: this.state.newRentalValueAirBnb,
+				investmentScoreTraditional: this.state.newInvestmentScoreTraditional,
+				investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
+				occupancyTraditionalPercentPerYear: this.state
+					.newOccupancyTraditionalPercentPerYear,
+				annualIncomeTraditional: this.state.newAnnualIncomeTraditional,
+				adjustedIncomeTraditional: this.state.newAdjustedIncomeTraditional,
+				indexTraditional: this.state.newIndexTraditional,
+				scoreTraditional: this.state.newScoreTraditional,
+				occupancyAirBnbPercentPerYear: this.state
+					.newOccupancyAirBnbPercentPerYear,
+				annualIncomeAirBnb: this.state.newAnnualIncomeAirBnb,
+				adjustedIncomeAirBnb: this.state.newAdjustedIncomeAirBnb,
+				indexAirBnb: this.state.newIndexAirBnb,
+				scoreAirBnb: this.state.newScoreAirBnb,
 			})
 			.then((response) => {
 				this.setState({
@@ -338,188 +338,200 @@ class App extends React.Component {
 			<div>
 				<h2>Create Listing</h2>
 				<form onSubmit={this.createListing}>
-					<input onKeyUp={this.changeStreet} type="text" placeholder="Street" />
+					<input
+						onKeyUp={this.changeNewStreet}
+						type="text"
+						placeholder="Street"
+					/>
 					<br />
-					<input onKeyUp={this.changeCity} type="text" placeholder="City" />
-					<br />
-					<input onKeyUp={this.changeState} type="text" placeholder="State" />
-					<br />
-					<input onKeyUp={this.changeZip} type="number" placeholder="Zip" />
+					<input onKeyUp={this.changeNewCity} type="text" placeholder="City" />
 					<br />
 					<input
-						onKeyUp={this.changePrice}
+						onKeyUp={this.changeNewState}
+						type="text"
+						placeholder="State"
+					/>
+					<br />
+					<input onKeyUp={this.changeNewZip} type="number" placeholder="Zip" />
+					<br />
+					<input
+						onKeyUp={this.changeNewPrice}
 						type="number"
 						step="0.01"
 						placeholder="Price"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeBeds}
+						onKeyUp={this.changeNewBeds}
 						type="number"
 						step="0.01"
 						placeholder="Beds"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeBath}
+						onKeyUp={this.changeNewBath}
 						type="number"
 						step="0.01"
 						placeholder="Bath"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeSqft}
+						onKeyUp={this.changeNewSqft}
 						type="number"
 						step="0.01"
 						placeholder="Sqft"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeDescription}
+						onKeyUp={this.changeNewDescription}
 						type="text"
 						placeholder="Description"
 					/>
 					<br />
-					<input onKeyUp={this.changeImage} type="text" placeholder="Image" />
+					<input
+						onKeyUp={this.changeNewImage}
+						type="text"
+						placeholder="Image"
+					/>
 					<br />
 					<input
-						onKeyUp={this.changeLastSoldDate}
+						onKeyUp={this.changeNewLastSoldDate}
 						type="text"
 						placeholder="LastSoldDate"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeLastSoldAmount}
+						onKeyUp={this.changeNewLastSoldAmount}
 						type="number"
 						step="0.01"
 						placeholder="LastSoldAmount"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeListingBy}
+						onKeyUp={this.changeNewListingBy}
 						type="text"
 						placeholder="ListingBy"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeListingPhone}
+						onKeyUp={this.changeNewListingPhone}
 						type="tel"
 						placeholder="ListingPhone"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeListingEmail}
+						onKeyUp={this.changeNewListingEmail}
 						type="email"
 						placeholder="ListingEmail"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeTaxAnnual}
+						onKeyUp={this.changeNewTaxAnnual}
 						type="number"
 						step="0.01"
 						placeholder="TaxAnnual"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeHoaMonthly}
+						onKeyUp={this.changeNewHoaMonthly}
 						type="number"
 						step="0.01"
 						placeholder="HoaMonthly"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeRentalValueTraditional}
+						onKeyUp={this.changeNewRentalValueTraditional}
 						type="number"
 						step="0.01"
 						placeholder="RentalValueTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeRentalValueAirBnb}
+						onKeyUp={this.changeNewRentalValueAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="RentalValueAirBnb"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeInvestmentScoreTraditional}
+						onKeyUp={this.changeNewInvestmentScoreTraditional}
 						type="number"
 						step="0.01"
 						placeholder="InvestmentScoreTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeInvestmentScoreAirBnb}
+						onKeyUp={this.changeNewInvestmentScoreAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="InvestmentScoreAirBnb"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeOccupancyTraditionalPercentPerYear}
+						onKeyUp={this.changeNewOccupancyTraditionalPercentPerYear}
 						type="number"
 						step="0.01"
 						placeholder="OccupancyTraditionalPercentPerYear"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeAnnualIncomeTraditional}
+						onKeyUp={this.changeNewAnnualIncomeTraditional}
 						type="number"
 						step="0.01"
 						placeholder="AnnualIncomeTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeAdjustedIncomeTraditional}
+						onKeyUp={this.changeNewAdjustedIncomeTraditional}
 						type="number"
 						step="0.01"
 						placeholder="AdjustedIncomeTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeIndexTraditional}
+						onKeyUp={this.changeNewIndexTraditional}
 						type="number"
 						step="0.01"
 						placeholder="IndexTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeScoreTraditional}
+						onKeyUp={this.changeNewScoreTraditional}
 						type="number"
 						step="0.01"
 						placeholder="ScoreTraditional"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeOccupancyAirBnbPercentPerYear}
+						onKeyUp={this.changeNewOccupancyAirBnbPercentPerYear}
 						type="number"
 						step="0.01"
 						placeholder="OccupancyAirBnbPercentPerYear"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeAnnualIncomeAirBnb}
+						onKeyUp={this.changeNewAnnualIncomeAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="AnnualIncomeAirBnb"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeAdjustedIncomeAirBnb}
+						onKeyUp={this.changeNewAdjustedIncomeAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="AdjustedIncomeAirBnb"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeIndexAirBnb}
+						onKeyUp={this.changeNewIndexAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="IndexAirBnb"
 					/>
 					<br />
 					<input
-						onKeyUp={this.changeScoreAirBnb}
+						onKeyUp={this.changeNewScoreAirBnb}
 						type="number"
 						step="0.01"
 						placeholder="ScoreAirBnb"
