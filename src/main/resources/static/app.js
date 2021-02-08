@@ -543,11 +543,11 @@ class App extends React.Component {
 				<h2>Listings</h2>
 				{this.state.listing.map((listing, index) => {
 					return (
-						<div class="container">
+						<div className="container">
 							<li key={index}>
-								<div class="house-display">
+								<div className="house-display">
 								<h2>{listing.image}</h2>
-									<image src={`${listing.image}`} alt="null"></image>
+									<image src={`${listing.image}`} alt="null"/>
 								</div>
 							</li>
 						</div>
