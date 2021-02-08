@@ -546,8 +546,8 @@ class App extends React.Component {
 						<div class="container">
 							<li key={index}>
 								<div class="house-display">
-								<h2>{listing.price}</h2>
-									<image src="{listing.image}" alt="House image not found"></image>
+								<h2>{listing.image}</h2>
+									<image src="" alt="House image not found"></image>
 								</div>
 							</li>
 						</div>
