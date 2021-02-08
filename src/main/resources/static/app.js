@@ -547,7 +547,7 @@ class App extends React.Component {
 							<li key={index}>
 								<div className="house-display">
 								<h2>{listing.image}</h2>
-									<image src={`${listing.image}`} alt="null"/>
+									<image src={`${listing.image}`} alt="null" />
 								</div>
 							</li>
 						</div>
