@@ -336,217 +336,230 @@ class App extends React.Component {
 	render = () => {
 		return (
 			<div>
-				<h2>Create Listing</h2>
-				<form onSubmit={this.createListing}>
-					<input
-						onKeyUp={this.changeNewStreet}
-						type="text"
-						placeholder="street"
-					/>
-					<br />
-					<input onKeyUp={this.changeNewCity} type="text" placeholder="City" />
-					<br />
-					<input
-						onKeyUp={this.changeNewState}
-						type="text"
-						placeholder="State"
-					/>
-					<br />
-					<input onKeyUp={this.changeNewZip} type="number" placeholder="Zip" />
-					<br />
-					<input
-						onKeyUp={this.changeNewPrice}
-						type="number"
-						step="0.01"
-						placeholder="Price"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewBeds}
-						type="number"
-						step="0.01"
-						placeholder="Beds"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewBath}
-						type="number"
-						step="0.01"
-						placeholder="Bath"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewSqft}
-						type="number"
-						step="0.01"
-						placeholder="Sqft"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewDescription}
-						type="text"
-						placeholder="Description"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewImage}
-						type="text"
-						placeholder="Image"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewLastSoldDate}
-						type="text"
-						placeholder="LastSoldDate"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewLastSoldAmount}
-						type="number"
-						step="0.01"
-						placeholder="LastSoldAmount"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewListingBy}
-						type="text"
-						placeholder="ListingBy"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewListingPhone}
-						type="tel"
-						placeholder="ListingPhone"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewListingEmail}
-						type="email"
-						placeholder="ListingEmail"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewTaxAnnual}
-						type="number"
-						step="0.01"
-						placeholder="TaxAnnual"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewHoaMonthly}
-						type="number"
-						step="0.01"
-						placeholder="HoaMonthly"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewRentalValueTraditional}
-						type="number"
-						step="0.01"
-						placeholder="RentalValueTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewRentalValueAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="RentalValueAirBnb"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewInvestmentScoreTraditional}
-						type="number"
-						step="0.01"
-						placeholder="InvestmentScoreTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewInvestmentScoreAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="InvestmentScoreAirBnb"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewOccupancyTraditionalPercentPerYear}
-						type="number"
-						step="0.01"
-						placeholder="OccupancyTraditionalPercentPerYear"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewAnnualIncomeTraditional}
-						type="number"
-						step="0.01"
-						placeholder="AnnualIncomeTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewAdjustedIncomeTraditional}
-						type="number"
-						step="0.01"
-						placeholder="AdjustedIncomeTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewIndexTraditional}
-						type="number"
-						step="0.01"
-						placeholder="IndexTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewScoreTraditional}
-						type="number"
-						step="0.01"
-						placeholder="ScoreTraditional"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewOccupancyAirBnbPercentPerYear}
-						type="number"
-						step="0.01"
-						placeholder="OccupancyAirBnbPercentPerYear"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewAnnualIncomeAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="AnnualIncomeAirBnb"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewAdjustedIncomeAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="AdjustedIncomeAirBnb"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewIndexAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="IndexAirBnb"
-					/>
-					<br />
-					<input
-						onKeyUp={this.changeNewScoreAirBnb}
-						type="number"
-						step="0.01"
-						placeholder="ScoreAirBnb"
-					/>
-					<br />
+				<details>
+					<summary>
+						<h2>Create Listing</h2>
+						<form onSubmit={this.createListing}>
+							<input
+								onKeyUp={this.changeNewStreet}
+								type="text"
+								placeholder="street"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewCity}
+								type="text"
+								placeholder="City"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewState}
+								type="text"
+								placeholder="State"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewZip}
+								type="number"
+								placeholder="Zip"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewPrice}
+								type="number"
+								step="0.01"
+								placeholder="Price"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewBeds}
+								type="number"
+								step="0.01"
+								placeholder="Beds"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewBath}
+								type="number"
+								step="0.01"
+								placeholder="Bath"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewSqft}
+								type="number"
+								step="0.01"
+								placeholder="Sqft"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewDescription}
+								type="text"
+								placeholder="Description"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewImage}
+								type="text"
+								placeholder="Image"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewLastSoldDate}
+								type="text"
+								placeholder="LastSoldDate"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewLastSoldAmount}
+								type="number"
+								step="0.01"
+								placeholder="LastSoldAmount"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewListingBy}
+								type="text"
+								placeholder="ListingBy"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewListingPhone}
+								type="tel"
+								placeholder="ListingPhone"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewListingEmail}
+								type="email"
+								placeholder="ListingEmail"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewTaxAnnual}
+								type="number"
+								step="0.01"
+								placeholder="TaxAnnual"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewHoaMonthly}
+								type="number"
+								step="0.01"
+								placeholder="HoaMonthly"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewRentalValueTraditional}
+								type="number"
+								step="0.01"
+								placeholder="RentalValueTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewRentalValueAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="RentalValueAirBnb"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewInvestmentScoreTraditional}
+								type="number"
+								step="0.01"
+								placeholder="InvestmentScoreTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewInvestmentScoreAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="InvestmentScoreAirBnb"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewOccupancyTraditionalPercentPerYear}
+								type="number"
+								step="0.01"
+								placeholder="OccupancyTraditionalPercentPerYear"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewAnnualIncomeTraditional}
+								type="number"
+								step="0.01"
+								placeholder="AnnualIncomeTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewAdjustedIncomeTraditional}
+								type="number"
+								step="0.01"
+								placeholder="AdjustedIncomeTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewIndexTraditional}
+								type="number"
+								step="0.01"
+								placeholder="IndexTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewScoreTraditional}
+								type="number"
+								step="0.01"
+								placeholder="ScoreTraditional"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewOccupancyAirBnbPercentPerYear}
+								type="number"
+								step="0.01"
+								placeholder="OccupancyAirBnbPercentPerYear"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewAnnualIncomeAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="AnnualIncomeAirBnb"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewAdjustedIncomeAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="AdjustedIncomeAirBnb"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewIndexAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="IndexAirBnb"
+							/>
+							<br />
+							<input
+								onKeyUp={this.changeNewScoreAirBnb}
+								type="number"
+								step="0.01"
+								placeholder="ScoreAirBnb"
+							/>
+							<br />
 
-					<input type="submit" value="Create Listing" />
-				</form>
+							<input type="submit" value="Create Listing" />
+						</form>
+					</summary>
+				</details>
+
 				<h2>Listings</h2>
 				{this.state.listing.map((listing, index) => {
 					return (
 						<div className="container">
 							<li key={index}>
 								<div className="house-display">
-								<h2>{listing.image}</h2>
+									<h2>{listing.image}</h2>
 									<img src={`${listing.image}`} alt="null" />
 								</div>
 							</li>
