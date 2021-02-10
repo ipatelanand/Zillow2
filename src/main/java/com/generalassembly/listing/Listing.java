@@ -209,23 +209,9 @@ public class Listing {
 		return investmentScoreTraditional;
 	}
 
-	public void setInvestmentScoreTraditional(Double investmentScoreTraditional,
-			Double occupancyTraditionalPercentPerYear, Double rentalValueTraditional, Double taxAnnual, Double hoaMonthly, Double price) {
-		double score = 0;
-		double index = (occupancyTraditionalPercentPerYear * 12 * rentalValueTraditional - taxAnnual - hoaMonthly * 12)
-				/ price;
-		if (index < .05) {
-			score = 1;
-		} else if (index > .05 && index < .06) {
-			score = 3;
-		} else if (index >= .06 && index < .07) {
-			score = 5;
-		} else if (index >= .07 && index < .08) {
-			score = 9;
-		} else {
-			score = 10;
-		}
-		this.investmentScoreTraditional = (investmentScoreTraditional*0)+score;
+	public void setInvestmentScoreTraditional(Double investmentScoreTraditional) {
+		
+		this.investmentScoreTraditional = investmentScoreTraditional;
 	}
 
 	public Double getInvestmentScoreAirBnb() {
