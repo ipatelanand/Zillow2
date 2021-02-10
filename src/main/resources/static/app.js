@@ -337,9 +337,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<details>
-					<summary>
-						<h2>Create Listing</h2>
-					</summary>
+					<summary>Create Listing</summary>
 					<form onSubmit={this.createListing}>
 						<input
 							onKeyUp={this.changeNewStreet}
@@ -559,13 +557,13 @@ class App extends React.Component {
 						<div className="container">
 							<li key={index}>
 								<div className="house-display">
-									<h2>{listing.price}</h2>
-									<img src={`${listing.image}`} alt="null" />
+									<h2>Price: ${listing.price}</h2>
+									<img src={`${listing.image}`} alt="house-img" />
 									<details>
 										<summary>See More</summary>
 										<div className="location">
-											location: {listing.street}, {listing.city},{" "}
-											{listing.state}, {listing.zip} <br></br>
+											location: {listing.street}, {listing.city},{listing.state}
+											, {listing.zip} <br></br>
 										</div>
 										<div className="details">
 											Details: <br></br>
@@ -573,7 +571,10 @@ class App extends React.Component {
 											{listing.sqft}
 											<br></br>
 										</div>
-										Description: {listing.description} <br></br>
+										<div className="description">
+											Description: {listing.description}
+										</div>
+										<br></br>
 										<div className="saleinfo">
 											Sale Info: lastSoldDate:{listing.lastSoldDate},
 											lastSoldAmount:{listing.lastSoldAmount}, listingBy:
@@ -582,13 +583,16 @@ class App extends React.Component {
 											{listing.listingEmail}, taxAnnual: {listing.taxAnnual},
 											hoaMonthly: {listing.hoaMonthly}
 										</div>
-										rentalValueTraditional: rentalValueAirBnb:
-										investmentScoreTraditional: investmentScoreAirBnb:
-										occupancyTraditionalPercentPerYear: annualIncomeTraditional:
-										adjustedIncomeTraditional: indexTraditional:
-										scoreTraditional: occupancyAirBnbPercentPerYear:
-										annualIncomeAirBnb: adjustedIncomeAirBnb: indexAirBnb:
-										scoreAirBnb:
+										<div className="invest">
+											rentalValueTraditional: {listing.rentalValueTraditional},
+											rentalValueAirBnb: {listing.rentalValueAirBnb},
+											investmentScoreTraditional: investmentScoreAirBnb:
+											occupancyTraditionalPercentPerYear:
+											annualIncomeTraditional: adjustedIncomeTraditional:
+											indexTraditional: scoreTraditional:
+											occupancyAirBnbPercentPerYear: annualIncomeAirBnb:
+											adjustedIncomeAirBnb: indexAirBnb: scoreAirBnb:
+										</div>
 									</details>
 								</div>
 							</li>

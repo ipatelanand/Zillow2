@@ -210,7 +210,7 @@ public class Listing {
 	}
 
 	public void setInvestmentScoreTraditional(Integer investmentScoreTraditional) {
-		this.investmentScoreTraditional = investmentScoreTraditional;
+		this.investmentScoreTraditional = investmentScoreTraditional*-1;
 	}
 
 	public Integer getInvestmentScoreAirBnb() {
