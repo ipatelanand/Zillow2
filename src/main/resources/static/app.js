@@ -8,7 +8,7 @@ class App extends React.Component {
 
 		let score = 0
 		let index =
-			(this.newOccupancyTraditionalPercentPerYear *
+			(this.newOccupancyTraditionalPercentPerYear +
 				12 *
 				this.newRentalValueTraditional -
 				this.newTaxAnnual -
