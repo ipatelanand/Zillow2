@@ -22,7 +22,7 @@ class App extends React.Component {
 			score = 5
 		} else if (index >= 0.07 && index < 0.08) {
 			score = 9
-		} else {
+		} else if (index >= .08){
 			score = 10
 		}
 
