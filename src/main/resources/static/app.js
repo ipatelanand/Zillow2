@@ -483,12 +483,12 @@ class App extends React.Component {
 							placeholder="RentalValueAirBnb"
 						/>
 						<br />
-						<input
+						{/* <input
 							onKeyUp={this.changeNewInvestmentScoreTraditional}
 							type="number"
 							step="0.01"
 							placeholder="InvestmentScoreTraditional"
-						/>
+						/> */}
 						<br />
 						<input
 							onKeyUp={this.changeNewInvestmentScoreAirBnb}
