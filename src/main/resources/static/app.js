@@ -488,7 +488,7 @@ class App extends React.Component {
 							type="number"
 							step="0.01"
 							placeholder="InvestmentScoreTraditional"
-						/> */}
+						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewInvestmentScoreAirBnb}
@@ -496,7 +496,7 @@ class App extends React.Component {
 							step="0.01"
 							placeholder="InvestmentScoreAirBnb"
 						/>
-						<br />
+						<br /> */}
 						<input
 							onKeyUp={this.changeNewOccupancyTraditionalPercentPerYear}
 							type="number"
@@ -504,21 +504,21 @@ class App extends React.Component {
 							placeholder="OccupancyTraditionalPercentPerYear"
 						/>
 						<br />
-						<input
+						{/* <input
 							onKeyUp={this.changeNewAnnualIncomeTraditional}
 							type="number"
 							step="0.01"
 							placeholder="AnnualIncomeTraditional"
-						/>
+						/> */}
 						<br />
-						<input
+						{/* <input
 							onKeyUp={this.changeNewAdjustedIncomeTraditional}
 							type="number"
 							step="0.01"
 							placeholder="AdjustedIncomeTraditional"
 						/>
-						<br />
-						<input
+						<br /> */}
+						{/* <input
 							onKeyUp={this.changeNewIndexTraditional}
 							type="number"
 							step="0.01"
@@ -531,7 +531,7 @@ class App extends React.Component {
 							step="0.01"
 							placeholder="ScoreTraditional"
 						/>
-						<br />
+						<br /> */}
 						<input
 							onKeyUp={this.changeNewOccupancyAirBnbPercentPerYear}
 							type="number"
@@ -539,7 +539,7 @@ class App extends React.Component {
 							placeholder="OccupancyAirBnbPercentPerYear"
 						/>
 						<br />
-						<input
+						{/* <input
 							onKeyUp={this.changeNewAnnualIncomeAirBnb}
 							type="number"
 							step="0.01"
@@ -566,7 +566,7 @@ class App extends React.Component {
 							step="0.01"
 							placeholder="ScoreAirBnb"
 						/>
-						<br />
+						<br /> */}
 
 						<input type="submit" value="Create Listing" />
 					</form>
@@ -609,11 +609,9 @@ class App extends React.Component {
 											rentalValueAirBnb: {listing.rentalValueAirBnb},
 											investmentScoreTraditional:
 											{listing.investmentScoreTraditional}
-											investmentScoreAirBnb: occupancyTraditionalPercentPerYear:
-											annualIncomeTraditional: adjustedIncomeTraditional:
-											indexTraditional: scoreTraditional:
-											occupancyAirBnbPercentPerYear: annualIncomeAirBnb:
-											adjustedIncomeAirBnb: indexAirBnb: scoreAirBnb:
+											investmentScoreAirBnb: {listing.investmentScoreAirBnb}
+											adjustedIncomeTraditional: occupancyAirBnbPercentPerYear:
+											adjustedIncomeAirBnb:
 										</div>
 									</details>
 								</div>
