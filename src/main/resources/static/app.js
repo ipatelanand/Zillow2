@@ -563,8 +563,9 @@ class App extends React.Component {
 									<img src={`${listing.image}`} alt="null" />
 									<details>
 										<summary>See More</summary>
-										street: `${listing.street}` <br></br>
-										city state zip: price beds bath sqft description: image:
+										street: {listing.street} <br></br>
+										city: {listing.street} <br></br>
+										state zip: price beds bath sqft description: image:
 										lastSoldDate: lastSoldAmount: listingBy: listingPhone:
 										listingEmail: taxAnnual: hoaMonthly: rentalValueTraditional:
 										rentalValueAirBnb: investmentScoreTraditional:
