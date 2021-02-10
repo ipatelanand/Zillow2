@@ -30,18 +30,18 @@ public class Listing {
   private Double hoaMonthly;
   private Double rentalValueTraditional;
   private Double rentalValueAirBnb;
-  private Integer investmentScoreTraditional;
-  private Integer investmentScoreAirBnb;
+  private Double investmentScoreTraditional;
+  private Double investmentScoreAirBnb;
   private Double occupancyTraditionalPercentPerYear;
   private Double annualIncomeTraditional;
   private Double adjustedIncomeTraditional;
-  private Integer indexTraditional;
-  private Integer scoreTraditional;
+  private Double indexTraditional;
+  private Double scoreTraditional;
   private Double occupancyAirBnbPercentPerYear;
   private Double annualIncomeAirBnb;
   private Double adjustedIncomeAirBnb;
-  private Integer indexAirBnb;
-  private Integer scoreAirBnb;
+  private Double indexAirBnb;
+  private Double scoreAirBnb;
 
 
 
@@ -205,19 +205,34 @@ public class Listing {
 		this.rentalValueAirBnb = rentalValueAirBnb;
 	}
 
-	public Integer getInvestmentScoreTraditional() {
+	public Double getInvestmentScoreTraditional() {
 		return investmentScoreTraditional;
 	}
 
-	public void setInvestmentScoreTraditional(Integer investmentScoreTraditional) {
-		this.investmentScoreTraditional = investmentScoreTraditional*-1;
+	public void setInvestmentScoreTraditional(Double investmentScoreTraditional,
+			Double occupancyTraditionalPercentPerYear, Double rentalValueTraditional, Double taxAnnual, Double hoaMonthly, Double price) {
+		double score = 0;
+		double index = (occupancyTraditionalPercentPerYear * 12 * rentalValueTraditional - taxAnnual - hoaMonthly * 12)
+				/ price;
+		if (index < .05) {
+			score = 1;
+		} else if (index > .05 && index < .06) {
+			score = 3;
+		} else if (index >= .06 && index < .07) {
+			score = 5;
+		} else if (index >= .07 && index < .08) {
+			score = 9;
+		} else {
+			score = 10;
+		}
+		this.investmentScoreTraditional = score;
 	}
 
-	public Integer getInvestmentScoreAirBnb() {
+	public Double getInvestmentScoreAirBnb() {
 		return investmentScoreAirBnb;
 	}
 
-	public void setInvestmentScoreAirBnb(Integer investmentScoreAirBnb) {
+	public void setInvestmentScoreAirBnb(Double investmentScoreAirBnb) {
 		this.investmentScoreAirBnb = investmentScoreAirBnb;
 	}
 
@@ -245,19 +260,19 @@ public class Listing {
 		this.adjustedIncomeTraditional = adjustedIncomeTraditional;
 	}
 
-	public Integer getIndexTraditional() {
+	public Double getIndexTraditional() {
 		return indexTraditional;
 	}
 
-	public void setIndexTraditional(Integer indexTraditional) {
+	public void setIndexTraditional(Double indexTraditional) {
 		this.indexTraditional = indexTraditional;
 	}
 
-	public Integer getScoreTraditional() {
+	public Double getScoreTraditional() {
 		return scoreTraditional;
 	}
 
-	public void setScoreTraditional(Integer scoreTraditional) {
+	public void setScoreTraditional(Double scoreTraditional) {
 		this.scoreTraditional = scoreTraditional;
 	}
 
@@ -285,19 +300,19 @@ public class Listing {
 		this.adjustedIncomeAirBnb = adjustedIncomeAirBnb;
 	}
 
-	public Integer getIndexAirBnb() {
+	public Double getIndexAirBnb() {
 		return indexAirBnb;
 	}
 
-	public void setIndexAirBnb(Integer indexAirBnb) {
+	public void setIndexAirBnb(Double indexAirBnb) {
 		this.indexAirBnb = indexAirBnb;
 	}
 
-	public Integer getScoreAirBnb() {
+	public Double getScoreAirBnb() {
 		return scoreAirBnb;
 	}
 
-	public void setScoreAirBnb(Integer scoreAirBnb) {
+	public void setScoreAirBnb(Double scoreAirBnb) {
 		this.scoreAirBnb = scoreAirBnb;
 	}
 

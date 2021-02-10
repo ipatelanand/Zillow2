@@ -587,7 +587,7 @@ class App extends React.Component {
 											rentalValueTraditional: {listing.rentalValueTraditional},
 											rentalValueAirBnb: {listing.rentalValueAirBnb},
 											investmentScoreTraditional:{" "}
-											{listing.investmentScoreTraditional}{" "}
+											{listing.investmentScoreTraditional}
 											investmentScoreAirBnb: occupancyTraditionalPercentPerYear:
 											annualIncomeTraditional: adjustedIncomeTraditional:
 											indexTraditional: scoreTraditional:
