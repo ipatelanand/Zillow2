@@ -561,6 +561,19 @@ class App extends React.Component {
 								<div className="house-display">
 									<h2>{listing.image}</h2>
 									<img src={`${listing.image}`} alt="null" />
+									<details>
+										<summary>See More</summary>
+										street: {listing.street} <br></br>
+										city state zip: price beds bath sqft description: image:
+										lastSoldDate: lastSoldAmount: listingBy: listingPhone:
+										listingEmail: taxAnnual: hoaMonthly: rentalValueTraditional:
+										rentalValueAirBnb: investmentScoreTraditional:
+										investmentScoreAirBnb: occupancyTraditionalPercentPerYear:
+										annualIncomeTraditional: adjustedIncomeTraditional:
+										indexTraditional: scoreTraditional:
+										occupancyAirBnbPercentPerYear: annualIncomeAirBnb:
+										adjustedIncomeAirBnb: indexAirBnb: scoreAirBnb:
+									</details>
 								</div>
 							</li>
 						</div>
