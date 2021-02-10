@@ -225,7 +225,7 @@ public class Listing {
 		} else {
 			score = 10;
 		}
-		this.investmentScoreTraditional = score;
+		this.investmentScoreTraditional = investmentScoreTraditional-investmentScoreTraditional+score;
 	}
 
 	public Double getInvestmentScoreAirBnb() {
