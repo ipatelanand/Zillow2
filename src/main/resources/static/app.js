@@ -45,7 +45,7 @@ class App extends React.Component {
 				hoaMonthly: this.state.newHoaMonthly,
 				rentalValueTraditional: this.state.newRentalValueTraditional,
 				rentalValueAirBnb: this.state.newRentalValueAirBnb,
-				investmentScoreTraditional: index,
+				investmentScoreTraditional: score,
 				investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
 				occupancyTraditionalPercentPerYear: this.state
 					.newOccupancyTraditionalPercentPerYear,
