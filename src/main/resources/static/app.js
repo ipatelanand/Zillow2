@@ -63,7 +63,6 @@ class App extends React.Component {
 	}
 	changeNewPrice = (event) => {
 		this.setState({ newPrice: event.target.value })
-		return event.target.value
 	}
 	changeNewBeds = (event) => {
 		this.setState({ newBeds: event.target.value })
@@ -107,8 +106,8 @@ class App extends React.Component {
 	changeNewRentalValueAirBnb = (event) => {
 		this.setState({ newRentalValueAirBnb: event.target.value })
 	}
-	changeNewInvestmentScoreTraditional = () => {
-		let score = this.changeNewPrice()
+	changeNewInvestmentScoreTraditional = (event) => {
+		let score = this.state.newPrice
 		let index =
 			(this.state.occupancyTraditionalPercentPerYear *
 				(12 * this.state.rentalValueTraditional -
