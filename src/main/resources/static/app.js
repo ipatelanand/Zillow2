@@ -6,24 +6,6 @@ class App extends React.Component {
 	createListing = (event) => {
 		event.preventDefault()
 
-		let score = newPrice
-		let index =
-			(this.newOccupancyTraditionalPercentPerYear *
-				(12 * this.newRentalValueTraditional -
-					(this.newTaxAnnual - this.newHoaMonthly * 12))) /
-			this.newPrice
-		if (index < 0.05) {
-			score = 1
-		} else if (index > 0.05 && index < 0.06) {
-			score = 3
-		} else if (index >= 0.06 && index < 0.07) {
-			score = 5
-		} else if (index >= 0.07 && index < 0.08) {
-			score = 9
-		} else if (index >= 0.08) {
-			score = 10
-		}
-
 		axios
 			.post("/listing", {
 				street: this.state.street,
@@ -45,7 +27,7 @@ class App extends React.Component {
 				hoaMonthly: this.state.newHoaMonthly,
 				rentalValueTraditional: this.state.newRentalValueTraditional,
 				rentalValueAirBnb: this.state.newRentalValueAirBnb,
-				investmentScoreTraditional: score,
+				investmentScoreTraditional: this.state.newInvestmentScoreTraditional,
 				investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
 				occupancyTraditionalPercentPerYear: this.state
 					.newOccupancyTraditionalPercentPerYear,
@@ -125,7 +107,24 @@ class App extends React.Component {
 		this.setState({ newRentalValueAirBnb: event.target.value })
 	}
 	changeNewInvestmentScoreTraditional = (event) => {
-		this.setState({ newInvestmentScoreTraditional: event.target.value })
+		let score = newPrice
+		let index =
+			(this.newOccupancyTraditionalPercentPerYear *
+				(12 * this.newRentalValueTraditional -
+					(this.newTaxAnnual - this.newHoaMonthly * 12))) /
+			this.newPrice
+		if (index < 0.05) {
+			score = 1
+		} else if (index > 0.05 && index < 0.06) {
+			score = 3
+		} else if (index >= 0.06 && index < 0.07) {
+			score = 5
+		} else if (index >= 0.07 && index < 0.08) {
+			score = 9
+		} else if (index >= 0.08) {
+			score = 10
+		}
+		this.setState({ newInvestmentScoreTraditional: score })
 	}
 	changeNewInvestmentScoreAirBnb = (event) => {
 		this.setState({ newInvestmentScoreAirBnb: event.target.value })
