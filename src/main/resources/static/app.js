@@ -6,7 +6,7 @@ class App extends React.Component {
 	createListing = (event) => {
 		event.preventDefault()
 
-		let score = this.newPrice
+		let score = newPrice
 		let index =
 			(this.newOccupancyTraditionalPercentPerYear *
 				(12 * this.newRentalValueTraditional -
