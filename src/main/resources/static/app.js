@@ -8,11 +8,10 @@ class App extends React.Component {
 
 		let score = 0
 		let index =
-			(newOccupancyTraditionalPercentPerYear +
-				12 * newRentalValueTraditional -
-				newTaxAnnual -
-				newHoaMonthly * 12) /
-			newPrice
+			(this.newOccupancyTraditionalPercentPerYear *
+				(12 * this.newRentalValueTraditional -
+					(this.newTaxAnnual - this.newHoaMonthly * 12))) /
+			this.newPrice
 		if (index < 0.05) {
 			score = 1
 		} else if (index > 0.05 && index < 0.06) {
