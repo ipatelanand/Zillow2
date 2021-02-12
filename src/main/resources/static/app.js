@@ -47,6 +47,7 @@ class App extends React.Component {
 		} else if (indexAirBnb >= 0.08) {
 			scoreAirBnb = 10
 		}
+
 		console.log("Traditional " + indexTrad + " " + scoreTrad)
 		console.log("AirBnb " + indexAirBnb + " " + scoreAirBnb)
 
@@ -192,13 +193,13 @@ class App extends React.Component {
 		event.preventDefault()
 		const id = event.target.getAttribute("id")
 		let annualTradRental =
-			this.state.newRentalValueTraditional *
+			this.state.updateRentalValueTraditional *
 			12 *
-			this.state.newOccupancyTraditionalPercentPerYear
-		let tax = this.state.newTaxAnnual
-		let hoaAnnual = this.state.newHoaMonthly * 12
+			this.state.updateOccupancyTraditionalPercentPerYear
+		let tax = this.state.updateTaxAnnual
+		let hoaAnnual = this.state.updateHoaMonthly * 12
 		let annualTradIncome = annualTradRental - hoaAnnual - tax
-		let indexTrad = annualTradIncome / this.state.newPrice
+		let indexTrad = annualTradIncome / this.state.updatePrice
 
 		let scoreTrad = 0
 		if (indexTrad < 0.05) {
@@ -214,11 +215,11 @@ class App extends React.Component {
 		}
 
 		let annualAirBnbRental =
-			this.state.newRentalValueAirBnb *
+			this.state.updateRentalValueAirBnb *
 			365 *
-			this.state.newOccupancyAirBnbPercentPerYear
+			this.state.updateOccupancyAirBnbPercentPerYear
 		let annualAirBnbIncome = annualAirBnbRental - hoaAnnual - tax
-		let indexAirBnb = annualAirBnbIncome / this.state.newPrice
+		let indexAirBnb = annualAirBnbIncome / this.state.updatePrice
 
 		let scoreAirBnb = 0
 		if (indexAirBnb < 0.05) {
