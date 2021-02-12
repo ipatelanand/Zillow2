@@ -5,7 +5,27 @@ class App extends React.Component {
 
 	createListing = (event) => {
 		event.preventDefault()
-
+		let score = this.state.newPrice
+		let index =
+			(this.state.occupancyTraditionalPercentPerYear *
+				(12 * this.state.rentalValueTraditional -
+					(this.state.taxAnnual - this.state.hoaMonthly * 12))) /
+			this.state.price
+		console.log(score)
+		console.log(index)
+		if (index < 0.05) {
+			score = 1
+		} else if (index > 0.05 && index < 0.06) {
+			score = 3
+		} else if (index >= 0.06 && index < 0.07) {
+			score = 5
+		} else if (index >= 0.07 && index < 0.08) {
+			score = 9
+		} else if (index >= 0.08) {
+			score = 10
+		}
+		console.log(score)
+		console.log(index)
 		axios
 			.post("/listing", {
 				street: this.state.street,
@@ -106,26 +126,10 @@ class App extends React.Component {
 	changeNewRentalValueAirBnb = (event) => {
 		this.setState({ newRentalValueAirBnb: event.target.value })
 	}
-	changeNewInvestmentScoreTraditional = (event) => {
-		let score = this.state.newPrice
-		let index =
-			(this.state.occupancyTraditionalPercentPerYear *
-				(12 * this.state.rentalValueTraditional -
-					(this.state.taxAnnual - this.state.hoaMonthly * 12))) /
-			this.state.price
-		if (index < 0.05) {
-			score = 1
-		} else if (index > 0.05 && index < 0.06) {
-			score = 3
-		} else if (index >= 0.06 && index < 0.07) {
-			score = 5
-		} else if (index >= 0.07 && index < 0.08) {
-			score = 9
-		} else if (index >= 0.08) {
-			score = 10
-		}
-		this.setState({ newInvestmentScoreTraditional: score })
-	}
+	// changeNewInvestmentScoreTraditional = (event) => {
+
+	// 	this.setState({ newInvestmentScoreTraditional: event.target.value })
+	// }
 	changeNewInvestmentScoreAirBnb = (event) => {
 		this.setState({ newInvestmentScoreAirBnb: event.target.value })
 	}
