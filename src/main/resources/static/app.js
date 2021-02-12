@@ -71,8 +71,6 @@ class App extends React.Component {
 				hoaMonthly: this.state.newHoaMonthly,
 				rentalValueTraditional: this.state.newRentalValueTraditional,
 				rentalValueAirBnb: this.state.newRentalValueAirBnb,
-				investmentScoreTraditional: this.state.newInvestmentScoreTraditional,
-				investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
 				occupancyTraditionalPercentPerYear: this.state
 					.newOccupancyTraditionalPercentPerYear,
 				occupancyAirBnbPercentPerYear: this.state
@@ -193,6 +191,47 @@ class App extends React.Component {
 	updateListing = (event) => {
 		event.preventDefault()
 		const id = event.target.getAttribute("id")
+		let annualTradRental =
+			this.state.newRentalValueTraditional *
+			12 *
+			this.state.newOccupancyTraditionalPercentPerYear
+		let tax = this.state.newTaxAnnual
+		let hoaAnnual = this.state.newHoaMonthly * 12
+		let annualTradIncome = annualTradRental - hoaAnnual - tax
+		let indexTrad = annualTradIncome / this.state.newPrice
+
+		let scoreTrad = 0
+		if (indexTrad < 0.05) {
+			scoreTrad = 1
+		} else if (indexTrad > 0.05 && indexTrad < 0.06) {
+			scoreTrad = 3
+		} else if (indexTrad >= 0.06 && indexTrad < 0.07) {
+			scoreTrad = 5
+		} else if (indexTrad >= 0.07 && indexTrad < 0.08) {
+			scoreTrad = 9
+		} else if (indexTrad >= 0.08) {
+			scoreTrad = 10
+		}
+
+		let annualAirBnbRental =
+			this.state.newRentalValueAirBnb *
+			365 *
+			this.state.newOccupancyAirBnbPercentPerYear
+		let annualAirBnbIncome = annualAirBnbRental - hoaAnnual - tax
+		let indexAirBnb = annualAirBnbIncome / this.state.newPrice
+
+		let scoreAirBnb = 0
+		if (indexAirBnb < 0.05) {
+			scoreAirBnb = 1
+		} else if (indexAirBnb > 0.05 && indexAirBnb < 0.06) {
+			scoreAirBnb = 3
+		} else if (indexAirBnb >= 0.06 && indexAirBnb < 0.07) {
+			scoreAirBnb = 5
+		} else if (indexAirBnb >= 0.07 && indexAirBnb < 0.08) {
+			scoreAirBnb = 9
+		} else if (indexAirBnb >= 0.08) {
+			scoreAirBnb = 10
+		}
 		axios
 			.put("/listing/" + id, {
 				street: this.state.updateStreet,
@@ -214,20 +253,16 @@ class App extends React.Component {
 				hoaMonthly: this.state.updateHoaMonthly,
 				rentalValueTraditional: this.state.updateRentalValueTraditional,
 				rentalValueAirBnb: this.state.updateRentalValueAirBnb,
-				investmentScoreTraditional: this.state.updateInvestmentScoreTraditional,
-				investmentScoreAirBnb: this.state.updateInvestmentScoreAirBnb,
+
 				occupancyTraditionalPercentPerYear: this.state
 					.updateOccupancyTraditionalPercentPerYear,
 				annualIncomeTraditional: this.state.updateAnnualIncomeTraditional,
-				adjustedIncomeTraditional: this.state.updateAdjustedIncomeTraditional,
-				indexTraditional: this.state.updateIndexTraditional,
-				scoreTraditional: this.state.updateScoreTraditional,
+
 				occupancyAirBnbPercentPerYear: this.state
 					.updateOccupancyAirBnbPercentPerYear,
-				annualIncomeAirBnb: this.state.updateAnnualIncomeAirBnb,
-				adjustedIncomeAirBnb: this.state.updateAdjustedIncomeAirBnb,
-				indexAirBnb: this.state.updateIndexAirBnb,
-				scoreAirBnb: this.state.updateScoreAirBnb,
+
+				scoreAirBnb: scoreAirBnb,
+				scoreTrad: scoreTrad,
 			})
 			.then((response) => {
 				this.setState({
@@ -252,17 +287,12 @@ class App extends React.Component {
 					hoaMonthly: null,
 					rentalValueTraditional: null,
 					rentalValueAirBnb: null,
-					investmentScoreTraditional: null,
-					investmentScoreAirBnb: null,
+
 					occupancyTraditionalPercentPerYear: null,
-					annualIncomeTraditional: null,
-					adjustedIncomeTraditional: null,
-					indexTraditional: null,
+
 					scoreTraditional: null,
 					occupancyAirBnbPercentPerYear: null,
-					annualIncomeAirBnb: null,
-					adjustedIncomeAirBnb: null,
-					indexAirBnb: null,
+
 					scoreAirBnb: null,
 				})
 			})
@@ -627,10 +657,8 @@ class App extends React.Component {
 											rentalValueTraditional: {listing.rentalValueTraditional},
 											rentalValueAirBnb: {listing.rentalValueAirBnb},
 											investmentScoreTraditional:
-											{listing.investmentScoreTraditional}
-											investmentScoreAirBnb: {listing.investmentScoreAirBnb}
-											adjustedIncomeTraditional: occupancyAirBnbPercentPerYear:
-											adjustedIncomeAirBnb:
+											{listing.scoreTrad}
+											investmentScoreAirBnb: {listing.scoreAirBnb}
 										</div>
 									</details>
 								</div>
@@ -756,7 +784,7 @@ class App extends React.Component {
 										placeholder="HoaMonthly"
 									/>
 									<br />
-									<input
+									{/* <input
 										onKeyUp={this.changeUpdateRentalValueTraditional}
 										type="number"
 										step="0.01"
@@ -769,7 +797,7 @@ class App extends React.Component {
 										step="0.01"
 										placeholder="RentalValueAirBnb"
 									/>
-									<br />
+									<br /> */}
 									{/* <input
 										onKeyUp={this.changeUpdateInvestmentScoreTraditional}
 										type="number"
