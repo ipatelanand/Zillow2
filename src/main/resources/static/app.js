@@ -445,14 +445,14 @@ class App extends React.Component {
 							onKeyUp={this.changeNewBeds}
 							type="number"
 							step="0.01"
-							placeholder="Beds"
+							placeholder="Beds #"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewBath}
 							type="number"
 							step="0.01"
-							placeholder="Bath"
+							placeholder="Bath #"
 						/>
 						<br />
 						<input
@@ -477,60 +477,60 @@ class App extends React.Component {
 						<input
 							onKeyUp={this.changeNewLastSoldDate}
 							type="text"
-							placeholder="Last Sold Date"
+							placeholder="Last Sold Year"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewLastSoldAmount}
 							type="number"
 							step="0.01"
-							placeholder="Last Sold Amount"
+							placeholder="Last Sold Amount $"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewListingBy}
 							type="text"
-							placeholder="Listing By"
+							placeholder="Listing Agent"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewListingPhone}
 							type="number"
-							placeholder="Listing agent's Phone"
+							placeholder="Listing Agent's Phone"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewListingEmail}
 							type="email"
-							placeholder="Listing agent's Email"
+							placeholder="Listing Agent's Email"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewTaxAnnual}
 							type="number"
 							step="0.01"
-							placeholder="Annual Tax"
+							placeholder="Annual Tax $"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewHoaMonthly}
 							type="number"
 							step="0.01"
-							placeholder="HOA monthly"
+							placeholder="HOA monthly $"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewRentalValueTraditional}
 							type="number"
 							step="0.01"
-							placeholder="Traditional rent (monthly)"
+							placeholder="Traditional rent (monthly) $"
 						/>
 						<br />
 						<input
 							onKeyUp={this.changeNewRentalValueAirBnb}
 							type="number"
 							step="0.01"
-							placeholder="AirBnb price (nightly)"
+							placeholder="AirBnb price (nightly) $"
 						/>
 						<br />
 						{/* <input
@@ -628,17 +628,17 @@ class App extends React.Component {
 						<div className="container">
 							<li key={index}>
 								<div className="house-display">
-									<h2>Price: ${listing.price}</h2>
+									<h2>${listing.price}</h2>
 									<img src={`${listing.image}`} alt="house-img" />
 									<details>
 										<summary>See More</summary>
 										<div className="location">
-											location: {listing.street}, {listing.city},{listing.state}
-											, {listing.zip} <br></br>
+											location: {listing.street}, {listing.city},{" "}
+											{listing.state}, {listing.zip} <br></br>
 										</div>
 										<div className="details">
 											House details: <br></br>
-											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft:
+											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft: #
 											{listing.sqft}
 											<br></br>
 										</div>
@@ -648,20 +648,20 @@ class App extends React.Component {
 										<br></br>
 										<div className="saleinfo">
 											Sale Info: <br></br>
-											last sold date:{listing.lastSoldDate}, last sold amount: $
-											{listing.lastSoldAmount}, listingBy:
+											last sold year:{listing.lastSoldDate}, last sold amount: $
+											{listing.lastSoldAmount}, listing Agent:
 											{listing.listingBy}
-											listing agent's phone: #{listing.listingPhone}, listing
-											agent's email:
-											{listing.listingEmail}, annual property tax: $
-											{listing.taxAnnual}, monthly HOA fee: $
+											listing Agent's phone: #{listing.listingPhone}, listing
+											Agent's email:
+											{listing.listingEmail}, Annual property tax: $
+											{listing.taxAnnual}, Monthly HOA fee: $
 											{listing.hoaMonthly}
 										</div>
 										<div className="invest">
 											Investment Info: <br></br>
 											Traditional rent (monthly): $
 											{listing.rentalValueTraditional} <br></br>
-											AirBnb rent (daily average): {listing.rentalValueAirBnb},
+											AirBnb rent (daily average): ${listing.rentalValueAirBnb},
 											<br></br>
 											Traditional investment score:
 											{listing.investmentScoreTraditional}
