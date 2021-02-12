@@ -667,184 +667,189 @@ class App extends React.Component {
 											<br></br>
 											AirBnb investment score: {listing.investmentScoreAirBnb}
 										</div>
-									</details>
-									<details>
-										<summary>Edit Listing</summary>
 										<div>
-											<li key={index}>
-												<button value={listing.id} onClick={this.deleteListing}>
-													DELETE
-												</button>
+											<details>
+												<summary>Edit Listing</summary>
+												<div>
+													<li key={index}>
+														<button
+															value={listing.id}
+															onClick={this.deleteListing}
+														>
+															DELETE
+														</button>
 
-												<form id={listing.id} onSubmit={this.updateListing}>
-													<input
-														onKeyUp={this.changeUpdateStreet}
-														type="text"
-														placeholder={`${listing.street}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateCity}
-														type="text"
-														placeholder={`${listing.city}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateState}
-														type="text"
-														placeholder={`${listing.state}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateZip}
-														type="number"
-														placeholder={listing.zip}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdatePrice}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.price}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateBeds}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.beds}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateBath}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.bath}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateSqft}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.sqft}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateDescription}
-														type="text"
-														placeholder={`${listing.description}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateImage}
-														type="text"
-														placeholder={`${listing.image}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateLastSoldDate}
-														type="text"
-														placeholder={`${listing.lastSoldDate}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateLastSoldAmount}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.lastSoldAmount}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateListingBy}
-														type="text"
-														placeholder={`${listing.listingBy}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateListingPhone}
-														type="tel"
-														placeholder={listing.phone}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateListingEmail}
-														type="email"
-														placeholder={`${listing.listingEmail}`}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateTaxAnnual}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.taxAnnual}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateHoaMonthly}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.hoaMonthly}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateRentalValueTraditional}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.rentalValueTraditional}
-													/>
-													<br />
-													<input
-														onKeyUp={this.changeUpdateRentalValueAirBnb}
-														type="number"
-														step="0.01"
-														min="0"
-														placeholder={listing.rentalValueAirBnb}
-													/>
-													<br />
-													{/* <input
+														<form id={listing.id} onSubmit={this.updateListing}>
+															<input
+																onKeyUp={this.changeUpdateStreet}
+																type="text"
+																placeholder={`${listing.street}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateCity}
+																type="text"
+																placeholder={`${listing.city}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateState}
+																type="text"
+																placeholder={`${listing.state}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateZip}
+																type="number"
+																placeholder={listing.zip}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdatePrice}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.price}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateBeds}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.beds}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateBath}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.bath}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateSqft}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.sqft}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateDescription}
+																type="text"
+																placeholder={`${listing.description}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateImage}
+																type="text"
+																placeholder={`${listing.image}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateLastSoldDate}
+																type="text"
+																placeholder={`${listing.lastSoldDate}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateLastSoldAmount}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.lastSoldAmount}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateListingBy}
+																type="text"
+																placeholder={`${listing.listingBy}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateListingPhone}
+																type="tel"
+																placeholder={listing.phone}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateListingEmail}
+																type="email"
+																placeholder={`${listing.listingEmail}`}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateTaxAnnual}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.taxAnnual}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateHoaMonthly}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.hoaMonthly}
+															/>
+															<br />
+															<input
+																onKeyUp={
+																	this.changeUpdateRentalValueTraditional
+																}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.rentalValueTraditional}
+															/>
+															<br />
+															<input
+																onKeyUp={this.changeUpdateRentalValueAirBnb}
+																type="number"
+																step="0.01"
+																min="0"
+																placeholder={listing.rentalValueAirBnb}
+															/>
+															<br />
+															{/* <input
 										onKeyUp={this.changeUpdateInvestmentScoreTraditional}
 										type="number"
 										step="0.01"
 										placeholder="InvestmentScoreTraditional"
 									/> */}
-													{/* <br /> */}
-													{/* <input
+															{/* <br /> */}
+															{/* <input
 										onKeyUp={this.changeUpdateInvestmentScoreAirBnb}
 										type="number"
 										step="0.01"
 										placeholder="InvestmentScoreAirBnb"
 									/>
 									<br /> */}
-													<input
-														onKeyUp={
-															this
-																.changeUpdateOccupancyTraditionalPercentPerYear
-														}
-														type="number"
-														step="0.01"
-														min="0"
-														max="1"
-														placeholder={
-															listing.occupancyTraditionalPercentPerYear
-														}
-													/>
-													<br />
-													{/* <input
+															<input
+																onKeyUp={
+																	this
+																		.changeUpdateOccupancyTraditionalPercentPerYear
+																}
+																type="number"
+																step="0.01"
+																min="0"
+																max="1"
+																placeholder={
+																	listing.occupancyTraditionalPercentPerYear
+																}
+															/>
+															<br />
+															{/* <input
 										onKeyUp={this.changeUpdateAnnualIncomeTraditional}
 										type="number"
 										step="0.01"
 										placeholder="AnnualIncomeTraditional"
 									/>
 									<br /> */}
-													{/* <input
+															{/* <input
 										onKeyUp={this.changeUpdateAdjustedIncomeTraditional}
 										type="number"
 										step="0.01"
@@ -865,18 +870,20 @@ class App extends React.Component {
 										placeholder="ScoreTraditional"
 									/>
 									<br /> */}
-													<input
-														onKeyUp={
-															this.changeUpdateOccupancyAirBnbPercentPerYear
-														}
-														type="number"
-														step="0.01"
-														min="0"
-														max="1"
-														placeholder={listing.occupancyAirBnbPercentPerYear}
-													/>
-													<br />
-													{/* <input
+															<input
+																onKeyUp={
+																	this.changeUpdateOccupancyAirBnbPercentPerYear
+																}
+																type="number"
+																step="0.01"
+																min="0"
+																max="1"
+																placeholder={
+																	listing.occupancyAirBnbPercentPerYear
+																}
+															/>
+															<br />
+															{/* <input
 										onKeyUp={this.changeUpdateAnnualIncomeAirBnb}
 										type="number"
 										step="0.01"
@@ -905,10 +912,11 @@ class App extends React.Component {
 									/>
 									<br /> */}
 
-													<input type="submit" value="Update Listing" />
-												</form>
-											</li>
-											)
+															<input type="submit" value="Update Listing" />
+														</form>
+													</li>
+												</div>
+											</details>
 										</div>
 									</details>
 								</div>
@@ -918,240 +926,238 @@ class App extends React.Component {
 				})}
 				<ul>
 					{this.state.listing.map((listing, index) => {
-						return (
-							<li key={index}>
-								<button value={listing.id} onClick={this.deleteListing}>
-									DELETE
-								</button>
-
-								<form id={listing.id} onSubmit={this.updateListing}>
-									<input
-										onKeyUp={this.changeUpdateStreet}
-										type="text"
-										placeholder={`${listing.street}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateCity}
-										type="text"
-										placeholder={`${listing.city}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateState}
-										type="text"
-										placeholder={`${listing.state}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateZip}
-										type="number"
-										placeholder={listing.zip}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdatePrice}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.price}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateBeds}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.beds}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateBath}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.bath}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateSqft}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.sqft}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateDescription}
-										type="text"
-										placeholder={`${listing.description}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateImage}
-										type="text"
-										placeholder={`${listing.image}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateLastSoldDate}
-										type="text"
-										placeholder={`${listing.lastSoldDate}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateLastSoldAmount}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.lastSoldAmount}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateListingBy}
-										type="text"
-										placeholder={`${listing.listingBy}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateListingPhone}
-										type="tel"
-										placeholder={listing.phone}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateListingEmail}
-										type="email"
-										placeholder={`${listing.listingEmail}`}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateTaxAnnual}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.taxAnnual}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateHoaMonthly}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.hoaMonthly}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateRentalValueTraditional}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.rentalValueTraditional}
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateRentalValueAirBnb}
-										type="number"
-										step="0.01"
-										min="0"
-										placeholder={listing.rentalValueAirBnb}
-									/>
-									<br />
-									{/* <input
-										onKeyUp={this.changeUpdateInvestmentScoreTraditional}
-										type="number"
-										step="0.01"
-										placeholder="InvestmentScoreTraditional"
-									/> */}
-									{/* <br /> */}
-									{/* <input
-										onKeyUp={this.changeUpdateInvestmentScoreAirBnb}
-										type="number"
-										step="0.01"
-										placeholder="InvestmentScoreAirBnb"
-									/>
-									<br /> */}
-									<input
-										onKeyUp={
-											this.changeUpdateOccupancyTraditionalPercentPerYear
-										}
-										type="number"
-										step="0.01"
-										min="0"
-										max="1"
-										placeholder={listing.occupancyTraditionalPercentPerYear}
-									/>
-									<br />
-									{/* <input
-										onKeyUp={this.changeUpdateAnnualIncomeTraditional}
-										type="number"
-										step="0.01"
-										placeholder="AnnualIncomeTraditional"
-									/>
-									<br /> */}
-									{/* <input
-										onKeyUp={this.changeUpdateAdjustedIncomeTraditional}
-										type="number"
-										step="0.01"
-										placeholder="AdjustedIncomeTraditional"
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateIndexTraditional}
-										type="number"
-										step="0.01"
-										placeholder="IndexTraditional"
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateScoreTraditional}
-										type="number"
-										step="0.01"
-										placeholder="ScoreTraditional"
-									/>
-									<br /> */}
-									<input
-										onKeyUp={this.changeUpdateOccupancyAirBnbPercentPerYear}
-										type="number"
-										step="0.01"
-										min="0"
-										max="1"
-										placeholder={listing.occupancyAirBnbPercentPerYear}
-									/>
-									<br />
-									{/* <input
-										onKeyUp={this.changeUpdateAnnualIncomeAirBnb}
-										type="number"
-										step="0.01"
-										placeholder="AnnualIncomeAirBnb"
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateAdjustedIncomeAirBnb}
-										type="number"
-										step="0.01"
-										placeholder="AdjustedIncomeAirBnb"
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateIndexAirBnb}
-										type="number"
-										step="0.01"
-										placeholder="IndexAirBnb"
-									/>
-									<br />
-									<input
-										onKeyUp={this.changeUpdateScoreAirBnb}
-										type="number"
-										step="0.01"
-										placeholder="ScoreAirBnb"
-									/>
-									<br /> */}
-
-									<input type="submit" value="Update Listing" />
-								</form>
-							</li>
-						)
+						// return (
+						// 	<li key={index}>
+						// 		<button value={listing.id} onClick={this.deleteListing}>
+						// 			DELETE
+						// 		</button>
+						// 		<form id={listing.id} onSubmit={this.updateListing}>
+						// 			<input
+						// 				onKeyUp={this.changeUpdateStreet}
+						// 				type="text"
+						// 				placeholder={`${listing.street}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateCity}
+						// 				type="text"
+						// 				placeholder={`${listing.city}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateState}
+						// 				type="text"
+						// 				placeholder={`${listing.state}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateZip}
+						// 				type="number"
+						// 				placeholder={listing.zip}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdatePrice}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.price}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateBeds}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.beds}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateBath}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.bath}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateSqft}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.sqft}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateDescription}
+						// 				type="text"
+						// 				placeholder={`${listing.description}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateImage}
+						// 				type="text"
+						// 				placeholder={`${listing.image}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateLastSoldDate}
+						// 				type="text"
+						// 				placeholder={`${listing.lastSoldDate}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateLastSoldAmount}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.lastSoldAmount}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateListingBy}
+						// 				type="text"
+						// 				placeholder={`${listing.listingBy}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateListingPhone}
+						// 				type="tel"
+						// 				placeholder={listing.phone}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateListingEmail}
+						// 				type="email"
+						// 				placeholder={`${listing.listingEmail}`}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateTaxAnnual}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.taxAnnual}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateHoaMonthly}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.hoaMonthly}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateRentalValueTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.rentalValueTraditional}
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateRentalValueAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				placeholder={listing.rentalValueAirBnb}
+						// 			/>
+						// 			<br />
+						// 			{/* <input
+						// 				onKeyUp={this.changeUpdateInvestmentScoreTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="InvestmentScoreTraditional"
+						// 			/> */}
+						// 			{/* <br /> */}
+						// 			{/* <input
+						// 				onKeyUp={this.changeUpdateInvestmentScoreAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="InvestmentScoreAirBnb"
+						// 			/>
+						// 			<br /> */}
+						// 			<input
+						// 				onKeyUp={
+						// 					this.changeUpdateOccupancyTraditionalPercentPerYear
+						// 				}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				max="1"
+						// 				placeholder={listing.occupancyTraditionalPercentPerYear}
+						// 			/>
+						// 			<br />
+						// 			{/* <input
+						// 				onKeyUp={this.changeUpdateAnnualIncomeTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="AnnualIncomeTraditional"
+						// 			/>
+						// 			<br /> */}
+						// 			{/* <input
+						// 				onKeyUp={this.changeUpdateAdjustedIncomeTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="AdjustedIncomeTraditional"
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateIndexTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="IndexTraditional"
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateScoreTraditional}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="ScoreTraditional"
+						// 			/>
+						// 			<br /> */}
+						// 			<input
+						// 				onKeyUp={this.changeUpdateOccupancyAirBnbPercentPerYear}
+						// 				type="number"
+						// 				step="0.01"
+						// 				min="0"
+						// 				max="1"
+						// 				placeholder={listing.occupancyAirBnbPercentPerYear}
+						// 			/>
+						// 			<br />
+						// 			{/* <input
+						// 				onKeyUp={this.changeUpdateAnnualIncomeAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="AnnualIncomeAirBnb"
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateAdjustedIncomeAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="AdjustedIncomeAirBnb"
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateIndexAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="IndexAirBnb"
+						// 			/>
+						// 			<br />
+						// 			<input
+						// 				onKeyUp={this.changeUpdateScoreAirBnb}
+						// 				type="number"
+						// 				step="0.01"
+						// 				placeholder="ScoreAirBnb"
+						// 			/>
+						// 			<br /> */}
+						// 			<input type="submit" value="Update Listing" />
+						// 		</form>
+						// 	</li>
+						// )
 					})}
 				</ul>
 			</div>
