@@ -154,39 +154,39 @@ class App extends React.Component {
 
 	// 	this.setState({ newInvestmentScoreTraditional: event.target.value })
 	// }
-	changeNewInvestmentScoreAirBnb = (event) => {
-		this.setState({ newInvestmentScoreAirBnb: event.target.value })
-	}
+	// changeNewInvestmentScoreAirBnb = (event) => {
+	// 	this.setState({ newInvestmentScoreAirBnb: event.target.value })
+	// }
 	changeNewOccupancyTraditionalPercentPerYear = (event) => {
 		this.setState({ newOccupancyTraditionalPercentPerYear: event.target.value })
 	}
-	changeNewAnnualIncomeTraditional = (event) => {
-		this.setState({ newAnnualIncomeTraditional: event.target.value })
-	}
-	changeNewAdjustedIncomeTraditional = (event) => {
-		this.setState({ newAdjustedIncomeTraditional: event.target.value })
-	}
-	changeNewIndexTraditional = (event) => {
-		this.setState({ newIndexTraditional: event.target.value })
-	}
-	changeNewScoreTraditional = (event) => {
-		this.setState({ newScoreTraditional: event.target.value })
-	}
+	// changeNewAnnualIncomeTraditional = (event) => {
+	// 	this.setState({ newAnnualIncomeTraditional: event.target.value })
+	// }
+	// changeNewAdjustedIncomeTraditional = (event) => {
+	// 	this.setState({ newAdjustedIncomeTraditional: event.target.value })
+	// }
+	// changeNewIndexTraditional = (event) => {
+	// 	this.setState({ newIndexTraditional: event.target.value })
+	// }
+	// changeNewScoreTraditional = (event) => {
+	// 	this.setState({ newScoreTraditional: event.target.value })
+	// }
 	changeNewOccupancyAirBnbPercentPerYear = (event) => {
 		this.setState({ newOccupancyAirBnbPercentPerYear: event.target.value })
 	}
-	changeNewAnnualIncomeAirBnb = (event) => {
-		this.setState({ newAnnualIncomeAirBnb: event.target.value })
-	}
-	changeNewAdjustedIncomeAirBnb = (event) => {
-		this.setState({ newAdjustedIncomeAirBnb: event.target.value })
-	}
-	changeNewIndexAirBnb = (event) => {
-		this.setState({ newIndexAirBnb: event.target.value })
-	}
-	changeNewScoreAirBnb = (event) => {
-		this.setState({ newScoreAirBnb: event.target.value })
-	}
+	// changeNewAnnualIncomeAirBnb = (event) => {
+	// 	this.setState({ newAnnualIncomeAirBnb: event.target.value })
+	// }
+	// changeNewAdjustedIncomeAirBnb = (event) => {
+	// 	this.setState({ newAdjustedIncomeAirBnb: event.target.value })
+	// }
+	// changeNewIndexAirBnb = (event) => {
+	// 	this.setState({ newIndexAirBnb: event.target.value })
+	// }
+	// changeNewScoreAirBnb = (event) => {
+	// 	this.setState({ newScoreAirBnb: event.target.value })
+	// }
 
 	deleteListing = (event) => {
 		axios.delete("/listing/" + event.target.value).then((response) => {
@@ -342,33 +342,33 @@ class App extends React.Component {
 			updateOccupancyTraditionalPercentPerYear: event.target.value,
 		})
 	}
-	changeUpdateAnnualIncomeTraditional = (event) => {
-		this.setState({ updateAnnualIncomeTraditional: event.target.value })
-	}
-	changeUpdateAdjustedIncomeTraditional = (event) => {
-		this.setState({ updateAdjustedIncomeTraditional: event.target.value })
-	}
-	changeUpdateIndexTraditional = (event) => {
-		this.setState({ updateIndexTraditional: event.target.value })
-	}
-	changeUpdateScoreTraditional = (event) => {
-		this.setState({ updateScoreTraditional: event.target.value })
-	}
+	// changeUpdateAnnualIncomeTraditional = (event) => {
+	// 	this.setState({ updateAnnualIncomeTraditional: event.target.value })
+	// }
+	// changeUpdateAdjustedIncomeTraditional = (event) => {
+	// 	this.setState({ updateAdjustedIncomeTraditional: event.target.value })
+	// }
+	// changeUpdateIndexTraditional = (event) => {
+	// 	this.setState({ updateIndexTraditional: event.target.value })
+	// }
+	// changeUpdateScoreTraditional = (event) => {
+	// 	this.setState({ updateScoreTraditional: event.target.value })
+	// }
 	changeUpdateOccupancyAirBnbPercentPerYear = (event) => {
 		this.setState({ updateOccupancyAirBnbPercentPerYear: event.target.value })
 	}
-	changeUpdateAnnualIncomeAirBnb = (event) => {
-		this.setState({ updateAnnualIncomeAirBnb: event.target.value })
-	}
-	changeUpdateAdjustedIncomeAirBnb = (event) => {
-		this.setState({ updateAdjustedIncomeAirBnb: event.target.value })
-	}
-	changeUpdateIndexAirBnb = (event) => {
-		this.setState({ updateIndexAirBnb: event.target.value })
-	}
-	changeUpdateScoreAirBnb = (event) => {
-		this.setState({ updateScoreAirBnb: event.target.value })
-	}
+	// changeUpdateAnnualIncomeAirBnb = (event) => {
+	// 	this.setState({ updateAnnualIncomeAirBnb: event.target.value })
+	// }
+	// changeUpdateAdjustedIncomeAirBnb = (event) => {
+	// 	this.setState({ updateAdjustedIncomeAirBnb: event.target.value })
+	// }
+	// changeUpdateIndexAirBnb = (event) => {
+	// 	this.setState({ updateIndexAirBnb: event.target.value })
+	// }
+	// changeUpdateScoreAirBnb = (event) => {
+	// 	this.setState({ updateScoreAirBnb: event.target.value })
+	// }
 
 	componentDidMount = () => {
 		axios.get("/listing").then((response) => {
@@ -776,20 +776,20 @@ class App extends React.Component {
 										placeholder="RentalValueAirBnb"
 									/>
 									<br />
-									<input
+									{/* <input
 										onKeyUp={this.changeUpdateInvestmentScoreTraditional}
 										type="number"
 										step="0.01"
 										placeholder="InvestmentScoreTraditional"
-									/>
-									<br />
-									<input
+									/> */}
+									{/* <br /> */}
+									{/* <input
 										onKeyUp={this.changeUpdateInvestmentScoreAirBnb}
 										type="number"
 										step="0.01"
 										placeholder="InvestmentScoreAirBnb"
 									/>
-									<br />
+									<br /> */}
 									<input
 										onKeyUp={
 											this.changeUpdateOccupancyTraditionalPercentPerYear
@@ -799,14 +799,14 @@ class App extends React.Component {
 										placeholder="OccupancyTraditionalPercentPerYear"
 									/>
 									<br />
-									<input
+									{/* <input
 										onKeyUp={this.changeUpdateAnnualIncomeTraditional}
 										type="number"
 										step="0.01"
 										placeholder="AnnualIncomeTraditional"
 									/>
-									<br />
-									<input
+									<br /> */}
+									{/* <input
 										onKeyUp={this.changeUpdateAdjustedIncomeTraditional}
 										type="number"
 										step="0.01"
@@ -826,7 +826,7 @@ class App extends React.Component {
 										step="0.01"
 										placeholder="ScoreTraditional"
 									/>
-									<br />
+									<br /> */}
 									<input
 										onKeyUp={this.changeUpdateOccupancyAirBnbPercentPerYear}
 										type="number"
@@ -834,7 +834,7 @@ class App extends React.Component {
 										placeholder="OccupancyAirBnbPercentPerYear"
 									/>
 									<br />
-									<input
+									{/* <input
 										onKeyUp={this.changeUpdateAnnualIncomeAirBnb}
 										type="number"
 										step="0.01"
@@ -861,7 +861,7 @@ class App extends React.Component {
 										step="0.01"
 										placeholder="ScoreAirBnb"
 									/>
-									<br />
+									<br /> */}
 
 									<input type="submit" value="Update Listing" />
 								</form>
