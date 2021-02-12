@@ -15,6 +15,7 @@ class App extends React.Component {
 		let annualTradIncome = annualTradRental - hoaAnnual - tax
 		let indexTrad = annualTradIncome / this.state.newPrice
 
+		let scoreTrad = 0
 		if (indexTrad < 0.05) {
 			scoreTrad = 1
 		} else if (indexTrad > 0.05 && indexTrad < 0.06) {
@@ -34,6 +35,7 @@ class App extends React.Component {
 		let annualAirBnbIncome = annualAirBnbRental - hoaAnnual - tax
 		let indexAirBnb = annualAirBnbIncome / this.state.newPrice
 
+		let scoreAirBnb = 0
 		if (indexAirBnb < 0.05) {
 			scoreAirBnb = 1
 		} else if (indexAirBnb > 0.05 && indexAirBnb < 0.06) {
