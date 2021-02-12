@@ -666,7 +666,11 @@ class App extends React.Component {
 											Traditional investment score:
 											{listing.investmentScoreTraditional}
 											<br></br>
+											Traditional occupancy: {listing.occupancyTraditionalPercentPerYear}
+											<br></br>
 											AirBnb investment score: {listing.investmentScoreAirBnb}
+											<br></br>
+											AirBnb occupancy: {listing.occupancyAirBnbPercentPerYear}
 										</div>
 										<div>
 											<details>
