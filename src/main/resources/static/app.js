@@ -5,7 +5,7 @@ class App extends React.Component {
 
 	createListing = (event) => {
 		event.preventDefault()
-		let score = this.state.newPrice
+
 		let annualTradRental =
 			this.state.newRentalValueTraditional *
 			12 *
@@ -13,23 +13,43 @@ class App extends React.Component {
 		let tax = this.state.newTaxAnnual
 		let hoaAnnual = this.state.newHoaMonthly * 12
 		let annualTradIncome = annualTradRental - hoaAnnual - tax
-		let index = annualTradIncome / this.state.newPrice
+		let indexTrad = annualTradIncome / this.state.newPrice
 
-		console.log(score)
-		console.log(index)
-		if (index < 0.05) {
-			score = 1
-		} else if (index > 0.05 && index < 0.06) {
-			score = 3
-		} else if (index >= 0.06 && index < 0.07) {
-			score = 5
-		} else if (index >= 0.07 && index < 0.08) {
-			score = 9
-		} else if (index >= 0.08) {
-			score = 10
+		if (indexTrad < 0.05) {
+			scoreTrad = 1
+		} else if (indexTrad > 0.05 && indexTrad < 0.06) {
+			scoreTrad = 3
+		} else if (indexTrad >= 0.06 && indexTrad < 0.07) {
+			scoreTrad = 5
+		} else if (indexTrad >= 0.07 && indexTrad < 0.08) {
+			scoreTrad = 9
+		} else if (indexTrad >= 0.08) {
+			scoreTrad = 10
 		}
-		console.log(score)
-		console.log(index)
+
+		let annualAirBnbRental =
+			this.state.newRentalValueAirBnb *
+			365 *
+			this.state.newOccupancyAirBnbPercentPerYear
+		let tax = this.state.newTaxAnnual
+		let hoaAnnual = this.state.newHoaMonthly * 12
+		let annualAirBnbIncome = annualAirBnbRental - hoaAnnual - tax
+		let indexAirBnb = annualAirBnbIncome / this.state.newPrice
+
+		if (indexAirBnb < 0.05) {
+			scoreAirBnb = 1
+		} else if (indexAirBnb > 0.05 && indexAirBnb < 0.06) {
+			scoreAirBnb = 3
+		} else if (indexAirBnb >= 0.06 && indexAirBnb < 0.07) {
+			scoreAirBnb = 5
+		} else if (indexAirBnb >= 0.07 && indexAirBnb < 0.08) {
+			scoreAirBnb = 9
+		} else if (indexAirBnb >= 0.08) {
+			scoreAirBnb = 10
+		}
+		console.log("Traditional" + indexTrad + scoreTrad)
+		console.log("AirBnb" + indexAirBnb + scoreAirBnb)
+
 		axios
 			.post("/listing", {
 				street: this.state.street,
