@@ -494,7 +494,7 @@ class App extends React.Component {
 						<br />
 						<input
 							onKeyUp={this.changeNewListingPhone}
-							type="tel"
+							type="number"
 							placeholder="Listing agent's Phone"
 						/>
 						<br />
@@ -559,7 +559,7 @@ class App extends React.Component {
 							step="0.01"
 							placeholder="AnnualIncomeTraditional"
 						/> */}
-						<br />
+						{/* <br /> */}
 						{/* <input
 							onKeyUp={this.changeNewAdjustedIncomeTraditional}
 							type="number"
@@ -770,7 +770,7 @@ class App extends React.Component {
 															<br />
 															<input
 																onKeyUp={this.changeUpdateListingPhone}
-																type="tel"
+																type="number"
 																placeholder={listing.phone}
 															/>
 															<br />
