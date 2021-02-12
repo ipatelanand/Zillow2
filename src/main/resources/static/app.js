@@ -31,8 +31,6 @@ class App extends React.Component {
 			this.state.newRentalValueAirBnb *
 			365 *
 			this.state.newOccupancyAirBnbPercentPerYear
-		let tax = this.state.newTaxAnnual
-		let hoaAnnual = this.state.newHoaMonthly * 12
 		let annualAirBnbIncome = annualAirBnbRental - hoaAnnual - tax
 		let indexAirBnb = annualAirBnbIncome / this.state.newPrice
 
