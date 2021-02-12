@@ -75,8 +75,8 @@ class App extends React.Component {
 					.newOccupancyTraditionalPercentPerYear,
 				occupancyAirBnbPercentPerYear: this.state
 					.newOccupancyAirBnbPercentPerYear,
-				scoreTradCalc: scoreTrad,
-				scoreAirBnbCalc: scoreAirBnb,
+				investmentScoreAirBnb: scoreTrad,
+				investmentScoreTraditional: scoreAirBnb,
 			})
 			.then((response) => {
 				this.setState({
@@ -261,8 +261,8 @@ class App extends React.Component {
 				occupancyAirBnbPercentPerYear: this.state
 					.updateOccupancyAirBnbPercentPerYear,
 
-				scoreAirBnb: scoreAirBnb,
-				scoreTrad: scoreTrad,
+				investmentScoreAirBnb: scoreAirBnb,
+				investmentScoreTraditional: scoreTrad,
 			})
 			.then((response) => {
 				this.setState({
@@ -290,10 +290,10 @@ class App extends React.Component {
 
 					occupancyTraditionalPercentPerYear: null,
 
-					scoreTraditional: null,
+					investmentScoreTraditional: null,
 					occupancyAirBnbPercentPerYear: null,
 
-					scoreAirBnb: null,
+					investmentScoreAirBnb: null,
 				})
 			})
 	}
@@ -657,8 +657,8 @@ class App extends React.Component {
 											rentalValueTraditional: {listing.rentalValueTraditional},
 											rentalValueAirBnb: {listing.rentalValueAirBnb},
 											investmentScoreTraditional:
-											{listing.scoreTrad}
-											investmentScoreAirBnb: {listing.scoreAirBnb}
+											{listing.investmentScoreTraditional}
+											investmentScoreAirBnb: {listing.investmentScoreAirBnb}
 										</div>
 									</details>
 								</div>
