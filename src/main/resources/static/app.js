@@ -636,7 +636,7 @@ class App extends React.Component {
 											, {listing.zip} <br></br>
 										</div>
 										<div className="details">
-											Details: <br></br>
+											House details: <br></br>
 											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft:
 											{listing.sqft}
 											<br></br>
@@ -646,7 +646,8 @@ class App extends React.Component {
 										</div>
 										<br></br>
 										<div className="saleinfo">
-											Sale Info: last sold date:{listing.lastSoldDate}, last
+											Sale Info: <br></br>
+											last sold date:{listing.lastSoldDate}, last
 											sold amount: ${listing.lastSoldAmount}, listingBy:
 											{listing.listingBy}
 											listing agent's phone: #{listing.listingPhone}, listing
@@ -656,6 +657,7 @@ class App extends React.Component {
 											{listing.hoaMonthly}
 										</div>
 										<div className="invest">
+											Investment Info: <br></br>
 											Traditional rent (monthly): $
 											{listing.rentalValueTraditional} <br></br>
 											AirBnb rent (daily average): {listing.rentalValueAirBnb},
@@ -683,19 +685,19 @@ class App extends React.Component {
 									<input
 										onKeyUp={this.changeUpdateStreet}
 										type="text"
-										placeholder={listing.street}
+										placeholder={`${listing.street}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateCity}
 										type="text"
-										placeholder={listing.city}
+										placeholder={`${listing.city}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateState}
 										type="text"
-										placeholder={listing.state}
+										placeholder={`${listing.state}`}
 									/>
 									<br />
 									<input
@@ -739,19 +741,19 @@ class App extends React.Component {
 									<input
 										onKeyUp={this.changeUpdateDescription}
 										type="text"
-										placeholder={listing.description}
+										placeholder={`${listing.description}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateImage}
 										type="text"
-										placeholder={listing.image}
+										placeholder={`${listing.image}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateLastSoldDate}
 										type="text"
-										placeholder={listing.lastSoldDate}
+										placeholder={`${listing.lastSoldDate}`}
 									/>
 									<br />
 									<input
@@ -765,19 +767,19 @@ class App extends React.Component {
 									<input
 										onKeyUp={this.changeUpdateListingBy}
 										type="text"
-										placeholder={listing.listingBy}
+										placeholder={`${listing.listingBy}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateListingPhone}
 										type="tel"
-										placeholder={listing.phone}
+										placeholder={`${listing.phone}`}
 									/>
 									<br />
 									<input
 										onKeyUp={this.changeUpdateListingEmail}
 										type="email"
-										placeholder={listing.listingEmail}
+										placeholder={`${listing.listingEmail}`}
 									/>
 									<br />
 									<input
