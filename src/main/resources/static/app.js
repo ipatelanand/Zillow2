@@ -47,8 +47,8 @@ class App extends React.Component {
 		} else if (indexAirBnb >= 0.08) {
 			scoreAirBnb = 10
 		}
-		console.log("Traditional" + indexTrad + scoreTrad)
-		console.log("AirBnb" + indexAirBnb + scoreAirBnb)
+		console.log("Traditional " + indexTrad + " " + scoreTrad)
+		console.log("AirBnb " + indexAirBnb + " " + scoreAirBnb)
 
 		axios
 			.post("/listing", {
@@ -75,16 +75,10 @@ class App extends React.Component {
 				investmentScoreAirBnb: this.state.newInvestmentScoreAirBnb,
 				occupancyTraditionalPercentPerYear: this.state
 					.newOccupancyTraditionalPercentPerYear,
-				annualIncomeTraditional: this.state.newAnnualIncomeTraditional,
-				adjustedIncomeTraditional: this.state.newAdjustedIncomeTraditional,
-				indexTraditional: this.state.newIndexTraditional,
-				scoreTraditional: this.state.newScoreTraditional,
 				occupancyAirBnbPercentPerYear: this.state
 					.newOccupancyAirBnbPercentPerYear,
-				annualIncomeAirBnb: this.state.newAnnualIncomeAirBnb,
-				adjustedIncomeAirBnb: this.state.newAdjustedIncomeAirBnb,
-				indexAirBnb: this.state.newIndexAirBnb,
-				scoreAirBnb: this.state.newScoreAirBnb,
+				scoreTradCalc: scoreTrad,
+				scoreAirBnbCalc: scoreAirBnb,
 			})
 			.then((response) => {
 				this.setState({
