@@ -8,8 +8,9 @@ class App extends React.Component {
 		let score = this.state.newPrice
 		let index =
 			(this.state.newOccupancyTraditionalPercentPerYear *
-				(12 * this.state.newRentalValueTraditional -
-					(this.state.newTaxAnnual - this.state.newHoaMonthly * 12))) /
+				12 *
+				this.state.newRentalValueTraditional -
+				(this.state.newTaxAnnual - this.state.newHoaMonthly * 12)) /
 			this.state.newPrice
 		console.log(score)
 		console.log(index)
