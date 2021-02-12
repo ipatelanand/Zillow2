@@ -6,12 +6,15 @@ class App extends React.Component {
 	createListing = (event) => {
 		event.preventDefault()
 		let score = this.state.newPrice
-		let index =
-			(this.state.newOccupancyTraditionalPercentPerYear *
-				12 *
-				this.state.newRentalValueTraditional -
-				(this.state.newTaxAnnual - this.state.newHoaMonthly * 12)) /
-			this.state.newPrice
+		let annualTradRental =
+			this.state.newRentalValueTraditional *
+			12 *
+			this.state.newOccupancyTraditionalPercentPerYear
+		let tax = this.state.newTaxAnnual
+		let hoaAnnual = this.state.newHoaMonthly * 12
+		let annualTradIncome = annualTradRental - hoaAnnual - tax
+		let index = annualTradIncome / this.state.newPrice
+
 		console.log(score)
 		console.log(index)
 		if (index < 0.05) {
