@@ -7,10 +7,10 @@ class App extends React.Component {
 		event.preventDefault()
 		let score = this.state.newPrice
 		let index =
-			(this.state.occupancyTraditionalPercentPerYear *
-				(12 * this.state.rentalValueTraditional -
-					(this.state.taxAnnual - this.state.hoaMonthly * 12))) /
-			this.state.price
+			(this.state.newOccupancyTraditionalPercentPerYear *
+				(12 * this.state.newRentalValueTraditional -
+					(this.state.newTaxAnnual - this.state.newHoaMonthly * 12))) /
+			this.state.newPrice
 		console.log(score)
 		console.log(index)
 		if (index < 0.05) {
