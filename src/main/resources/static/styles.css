@@ -59,6 +59,7 @@ h1 {
   top:  calc(50vh - 240px / 2 - 2em); */
   padding: 5pt 10pt;
   z-index: 9;
+  overflow-y: auto;
 }
 
 .one[open] summary::before {
