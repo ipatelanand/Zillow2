@@ -3,7 +3,7 @@
     flex-wrap: wrap;
 }
 
-.box > img{
+.house-display > img{
     height: 300px;
     width: 300px;
 }
