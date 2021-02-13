@@ -635,7 +635,7 @@ class App extends React.Component {
 									<img src={`${listing.image}`} alt="house-img" />
 									<details className="one">
 										<summary className="button">See More</summary>
-										<div></div>
+										<div>
 										<div className="location">
 											location: {listing.street}, {listing.city}, 
 											{listing.state}, {listing.zip} <br></br>
@@ -676,6 +676,7 @@ class App extends React.Component {
 											<br></br>
 											AirBnb occupancy: {listing.occupancyAirBnbPercentPerYear}
 										</div>
+											</div>
 										</details>
 										<div>
 											<details>
