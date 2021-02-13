@@ -637,51 +637,50 @@ class App extends React.Component {
 										<summary className="button">See More</summary>
 										<div>
 										<div className="location">
-												<h3>Location:</h3> <br></br>
+												<h2>Location:</h2> 
 												<span className="tab"></span>{listing.street}, {listing.city}, {" "}
 											{listing.state}, {listing.zip} 
 										</div>
 											<br></br>
 										<div className="house-details">
-												<h4>House details:</h4> <br></br>
-												<span className="tab"></span>
+												<h6>House details:</h6> <br></br>
+												
 											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft: #
 											{listing.sqft}
 											<br></br>
 										</div>
 										<div className="description">
-												Description: <br></br>
-												<span className="tab"></span>{listing.description}
+												Description: {listing.description}
 										</div>
 										<br></br>
 										<div className="saleinfo">
-												Sale Info: <br></br>
-												<span className="tab"></span>
+												Historical data: 
+												
 											last sold year:{listing.lastSoldDate}, last sold amount: $
 											{listing.lastSoldAmount} <br></br> 
-											Agent info: <br></br>
-											<span className="tab"></span>Agent:
-											{listing.listingBy}
-											Phone: #{listing.listingPhone}, Email:
+											Agent info: {" "}
+											
+											{listing.listingBy} {" "}
+											Phone: #{listing.listingPhone}, Email: {" "}
 											{listing.listingEmail}
 										</div>
 										<div className="invest">
-												Investment Info: <br></br>
-												<span className="tab"></span>Annual property tax: $
+												<h6>Investment Info:</h6> <br></br>
+												Annual property tax: $
 											{listing.taxAnnual}, Monthly HOA fee: $
 											{listing.hoaMonthly} <br></br>
-											<span className="tab"></span>Traditional rent (monthly): $
+											Traditional rent (monthly): $
 											{listing.rentalValueTraditional} <br></br>
-											AirBnb rent (daily average): <span className="tab"></span>${listing.rentalValueAirBnb},
+											AirBnb rent (daily average): ${listing.rentalValueAirBnb},
 											<br></br>
 											Traditional investment score:
-											<span className="tab"></span>{listing.investmentScoreTraditional}
+											{listing.investmentScoreTraditional}
 											<br></br>
-											Traditional occupancy: <span className="tab"></span>{listing.occupancyTraditionalPercentPerYear}
+											Traditional occupancy: {listing.occupancyTraditionalPercentPerYear}
 											<br></br>
-											AirBnb investment score: <span className="tab"></span>{listing.investmentScoreAirBnb}
+											AirBnb investment score: {listing.investmentScoreAirBnb}
 											<br></br>
-											AirBnb occupancy: <span className="tab"></span>{listing.occupancyAirBnbPercentPerYear}
+											AirBnb occupancy: {listing.occupancyAirBnbPercentPerYear}
 										</div>
 											</div>
 										</details>
