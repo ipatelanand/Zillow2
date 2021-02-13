@@ -637,13 +637,13 @@ class App extends React.Component {
 										<summary className="button">See More</summary>
 										<div>
 										<div className="location">
-												<h2>Location:</h2> 
-												<span className="tab"></span>{listing.street}, {listing.city}, {" "}
+												<h6>Location:</h6> 
+												{listing.street}, {listing.city}, {" "}
 											{listing.state}, {listing.zip} 
 										</div>
 											<br></br>
 										<div className="house-details">
-												<h6>House details:</h6> <br></br>
+												<h6>House details:</h6> 
 												
 											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft: #
 											{listing.sqft}
@@ -663,15 +663,16 @@ class App extends React.Component {
 											{listing.listingBy} {" "}
 											Phone: #{listing.listingPhone}, Email: {" "}
 											{listing.listingEmail}
-										</div>
+											</div>
+											<br></br>
 										<div className="invest">
-												<h6>Investment Info:</h6> <br></br>
+												<h6>Investment Info:</h6> 
 												Annual property tax: $
-											{listing.taxAnnual}, Monthly HOA fee: $
+											{listing.taxAnnual} <br></br> Monthly HOA fee: $
 											{listing.hoaMonthly} <br></br>
 											Traditional rent (monthly): $
 											{listing.rentalValueTraditional} <br></br>
-											AirBnb rent (daily average): ${listing.rentalValueAirBnb},
+											AirBnb rent (daily average): ${listing.rentalValueAirBnb}
 											<br></br>
 											Traditional investment score:
 											{listing.investmentScoreTraditional}
@@ -689,12 +690,7 @@ class App extends React.Component {
 												<summary>Edit Listing</summary>
 												<div>
 													<li key={index}>
-														<button
-															value={listing.id}
-															onClick={this.deleteListing}
-														>
-															DELETE
-														</button>
+														
 
 														<form id={listing.id} onSubmit={this.updateListing}>
 															<input
@@ -930,7 +926,13 @@ class App extends React.Component {
 									<br /> */}
 
 															<input type="submit" value="Update Listing" />
-														</form>
+													</form>
+													<button
+															value={listing.id}
+															onClick={this.deleteListing}
+														>
+															DELETE
+														</button>
 													</li>
 												</div>
 											</details>
