@@ -930,10 +930,11 @@ class App extends React.Component {
 								</div>
 								</li>
 								</div>
-								</div>
-						</div>
+								
 					)
 				})}
+						</div>
+						</div>
 				<ul>
 					{this.state.listing.map((listing, index) => {
 						// return (
