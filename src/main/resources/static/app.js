@@ -623,10 +623,11 @@ class App extends React.Component {
 				</details>
 
 				<h2>Listings</h2>
+				<div className="container">
+							<div className="row"> 
 				{this.state.listing.map((listing, index) => {
 					return (
-						<div className="container">
-							<div className="row"> 
+						
 								<div className="col-sm">
 							<li key={index}>
 								<div className="house-display">
