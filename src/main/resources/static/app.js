@@ -633,10 +633,11 @@ class App extends React.Component {
 								<div className="house-display">
 									<h2>${listing.price}</h2>
 									<img src={`${listing.image}`} alt="house-img" />
-									<details>
+									<details className="one">
 										<summary className="button">See More</summary>
+										<div></div>
 										<div className="location">
-											location: {listing.street}, {listing.city},{" "}
+											location: {listing.street}, {listing.city}, 
 											{listing.state}, {listing.zip} <br></br>
 										</div>
 										<div className="details">
