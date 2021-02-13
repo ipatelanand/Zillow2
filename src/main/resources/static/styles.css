@@ -1,3 +1,7 @@
+h1 {
+    color: red;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +12,7 @@
     width: 300px;
 }
 
-.box {
+.box-house {
     width: 30%;
     border: 5px solid red;
 }

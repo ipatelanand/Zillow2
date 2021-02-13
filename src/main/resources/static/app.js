@@ -628,7 +628,7 @@ class App extends React.Component {
 				{this.state.listing.map((listing, index) => {
 					return (
 						
-						<div className="box">
+						<div className="box-house">
 							<li key={index}>
 								<div className="house-display">
 									<h2>${listing.price}</h2>
