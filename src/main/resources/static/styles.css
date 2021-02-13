@@ -18,6 +18,11 @@ h1 {
     /* border: 5px solid red; */
 }
 
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
 .button {
   width: 10em;
   text-align: center;
