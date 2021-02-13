@@ -676,6 +676,7 @@ class App extends React.Component {
 											<br></br>
 											AirBnb occupancy: {listing.occupancyAirBnbPercentPerYear}
 										</div>
+										</details>
 										<div>
 											<details>
 												<summary>Edit Listing</summary>
@@ -927,7 +928,7 @@ class App extends React.Component {
 												</div>
 											</details>
 										</div>
-									</details>
+									
 								</div>
 								</li>
 								</div>
