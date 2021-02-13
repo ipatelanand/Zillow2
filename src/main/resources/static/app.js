@@ -634,7 +634,7 @@ class App extends React.Component {
 									<h2>${listing.price}</h2>
 									<img src={`${listing.image}`} alt="house-img" />
 									<details>
-										<summary>See More</summary>
+										<summary className="button">See More</summary>
 										<div className="location">
 											location: {listing.street}, {listing.city},{" "}
 											{listing.state}, {listing.zip} <br></br>

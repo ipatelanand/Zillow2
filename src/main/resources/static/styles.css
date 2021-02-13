@@ -1,5 +1,5 @@
 h1 {
-    color: red;
+    /* color: red; */
 }
 
 .container {
@@ -14,6 +14,57 @@ h1 {
 }
 
 .box-house {
-    width: 30%;
-    border: 5px solid red;
+    width: 33%;
+    /* border: 5px solid red; */
+}
+
+.button {
+  width: 10em;
+  text-align: center;
+  font-weight: bold;
+  padding: 1em 2em;
+  background: DEEPPINK;
+  border-radius: 3em;
+  color: white;
+  cursor: pointer;
+}
+
+details > div {
+  width: 20em;
+  border: 2px solid black;
+  padding: 1em 2em;
+  position: fixed;
+  width: 360px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: white;
+  z-index: 3;
+  box-shadow: 10px 10px 10px DIMGRAY;
+}
+
+details[open] summary::after { 
+  content: "×"; 
+  font-size: 28pt;  
+  position: fixed; 
+  right: calc(50vw - 360px / 2 - 2em); 
+  top:  calc(50vh - 240px / 2 - 2em);
+  padding: 5pt 10pt;
+  z-index: 9;
+}
+
+details[open] summary::before {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 1;
 }
