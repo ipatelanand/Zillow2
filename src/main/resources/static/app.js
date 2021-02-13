@@ -626,6 +626,8 @@ class App extends React.Component {
 				{this.state.listing.map((listing, index) => {
 					return (
 						<div className="container">
+							<div className="row"> 
+								<div className="col-sm">
 							<li key={index}>
 								<div className="house-display">
 									<h2>${listing.price}</h2>
@@ -925,7 +927,9 @@ class App extends React.Component {
 										</div>
 									</details>
 								</div>
-							</li>
+								</li>
+								</div>
+								</div>
 						</div>
 					)
 				})}
