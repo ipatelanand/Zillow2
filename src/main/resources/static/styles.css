@@ -34,8 +34,8 @@ h1 {
   border: 2px solid black;
   padding: 1em 2em;
   position: fixed;
-  width: 360px;
-  height: 240px;
+  width: 80%;
+  height: 80%;
   top: 0;
   left: 0;
   right: 0;
@@ -50,8 +50,8 @@ h1 {
   content: "×"; 
   font-size: 28pt;  
   position: fixed; 
-  right: calc(50vw - 360px / 2 - 2em); 
-  top:  calc(50vh - 240px / 2 - 2em);
+  /* right: calc(50vw - 360px / 2 - 2em); 
+  top:  calc(50vh - 240px / 2 - 2em); */
   padding: 5pt 10pt;
   z-index: 9;
 }
