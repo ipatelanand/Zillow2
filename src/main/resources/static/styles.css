@@ -2,7 +2,7 @@ h1 {
     /* color: red; */
 }
 
-.logo {
+.logo > img{
   width: 200px;
   height: 200px;
 }
