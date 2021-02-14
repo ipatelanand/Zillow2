@@ -3,7 +3,8 @@ h1 {
 }
 
 .logo {
-  width: 200px;
+  display: flex;
+ width: 200px; 
 }
 
 .container {
