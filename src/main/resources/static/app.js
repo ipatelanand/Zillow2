@@ -927,12 +927,12 @@ class App extends React.Component {
 
 															<input type="submit" value="Update Listing" />
 													</form>
-													{/* <button
+													<button
 															value={listing.id}
 															onClick={this.deleteListing}
 														>
 															DELETE
-														</button> */}
+														</button>
 													</li>
 												</div>
 											</details>
