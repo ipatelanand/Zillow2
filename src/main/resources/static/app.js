@@ -1,3 +1,7 @@
+import { Auth0Provider } from "@auth0/auth0-react"
+const domain = process.env.REACT_APP_AUTH0_DOMAIN
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
+
 class App extends React.Component {
 	state = {
 		listing: [],
@@ -624,65 +628,63 @@ class App extends React.Component {
 
 				<h2>Listings</h2>
 				<div className="container">
-							
-				{this.state.listing.map((listing, index) => {
-					return (
-						
-						<div className="box-house">
-							<li key={index}>
-								<div className="house-display">
-									<h2>${listing.price}</h2>
-									<img src={`${listing.image}`} alt="house-img" />
-									<details className="one">
-										<summary className="button">See More</summary>
-										<div>
-										<div className="location">
-												<h6>Location:</h6> 
-												{listing.street}, {listing.city}, {" "}
-											{listing.state}, {listing.zip} 
-										</div>
-											<br></br>
-										<div className="house-details">
-												<h6>House details:</h6> 
-												
-											Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft: #
-											{listing.sqft}
-											<br></br>
-										</div>
-										<div className="description">
-												Description: {listing.description}
-										</div>
-										<br></br>
-										<div className="saleinfo">
-												Historical data: 
-												
-											last sold year:{listing.lastSoldDate}, last sold amount: $
-											{listing.lastSoldAmount} <br></br> 
-											Agent info: {" "}
-											
-											{listing.listingBy} {" "}
-											Phone: #{listing.listingPhone}, Email: {" "}
-											{listing.listingEmail}
-											</div>
-											<br></br>
-										<div className="invest">
-												<h6>Investment Info:</h6> 
-												Annual property tax: $
-											{listing.taxAnnual} <br></br> Monthly HOA fee: $
-											{listing.hoaMonthly} <br></br>
-											Traditional rent (monthly): $
-											{listing.rentalValueTraditional} <br></br>
-											AirBnb rent (daily average): ${listing.rentalValueAirBnb}
-											<br></br>
-											Traditional investment score:
-											{listing.investmentScoreTraditional}
-											<br></br>
-											Traditional occupancy: {listing.occupancyTraditionalPercentPerYear}
-											<br></br>
-											AirBnb investment score: {listing.investmentScoreAirBnb}
-											<br></br>
-											AirBnb occupancy: {listing.occupancyAirBnbPercentPerYear}
-										</div>
+					{this.state.listing.map((listing, index) => {
+						return (
+							<div className="box-house">
+								<li key={index}>
+									<div className="house-display">
+										<h2>${listing.price}</h2>
+										<img src={`${listing.image}`} alt="house-img" />
+										<details className="one">
+											<summary className="button">See More</summary>
+											<div>
+												<div className="location">
+													<h6>Location:</h6>
+													{listing.street}, {listing.city}, {listing.state},{" "}
+													{listing.zip}
+												</div>
+												<br></br>
+												<div className="house-details">
+													<h6>House details:</h6>
+													Beds: #{listing.beds}, Bath: #{listing.bath}, Sqft: #
+													{listing.sqft}
+													<br></br>
+												</div>
+												<div className="description">
+													Description: {listing.description}
+												</div>
+												<br></br>
+												<div className="saleinfo">
+													Historical data: last sold year:{listing.lastSoldDate}
+													, last sold amount: ${listing.lastSoldAmount}{" "}
+													<br></br>
+													Agent info: {listing.listingBy} Phone: #
+													{listing.listingPhone}, Email: {listing.listingEmail}
+												</div>
+												<br></br>
+												<div className="invest">
+													<h6>Investment Info:</h6>
+													Annual property tax: ${
+														listing.taxAnnual
+													} <br></br> Monthly HOA fee: ${listing.hoaMonthly}{" "}
+													<br></br>
+													Traditional rent (monthly): $
+													{listing.rentalValueTraditional} <br></br>
+													AirBnb rent (daily average): $
+													{listing.rentalValueAirBnb}
+													<br></br>
+													Traditional investment score:
+													{listing.investmentScoreTraditional}
+													<br></br>
+													Traditional occupancy:{" "}
+													{listing.occupancyTraditionalPercentPerYear}
+													<br></br>
+													AirBnb investment score:{" "}
+													{listing.investmentScoreAirBnb}
+													<br></br>
+													AirBnb occupancy:{" "}
+													{listing.occupancyAirBnbPercentPerYear}
+												</div>
 											</div>
 										</details>
 										<div>
@@ -690,8 +692,6 @@ class App extends React.Component {
 												<summary>Edit Listing</summary>
 												<div>
 													<li key={index}>
-														
-
 														<form id={listing.id} onSubmit={this.updateListing}>
 															<input
 																onKeyUp={this.changeUpdateStreet}
@@ -926,26 +926,23 @@ class App extends React.Component {
 									<br /> */}
 
 															<input type="submit" value="Update Listing" />
-													</form>
-													{/* <button
+														</form>
+														<button
 															value={listing.id}
 															onClick={this.deleteListing}
 														>
 															DELETE
-														</button> */}
+														</button>
 													</li>
 												</div>
 											</details>
 										</div>
-									
-								</div>
+									</div>
 								</li>
-								</div>
-								
-					)
-				})}
-						
-						</div>
+							</div>
+						)
+					})}
+				</div>
 				<ul>
 					{this.state.listing.map((listing, index) => {
 						// return (
