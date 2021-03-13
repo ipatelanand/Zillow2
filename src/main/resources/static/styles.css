@@ -81,6 +81,7 @@ li {
 }
 
 .back {
+	height: 80%;
 	background-image: url("https://i.imgur.com/IACAcUq.png");
 	background-size: contain;
 	background-repeat: no-repeat;
